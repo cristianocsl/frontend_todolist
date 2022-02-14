@@ -15,8 +15,10 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "plugin:react/jsx-runtime"
     ],
     "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }
 }

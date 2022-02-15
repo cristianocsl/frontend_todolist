@@ -15,10 +15,11 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "plugin:react/jsx-runtime"
+        "react"
     ],
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"]
     }
 }

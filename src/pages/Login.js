@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import './register.css';
 import { Alert, Button, Stack } from '@mui/material';
@@ -74,6 +75,9 @@ export default function login() {
               { errorMessage }
             </Alert>
           </Stack>
+        </span>
+        <span>
+          New to here? <Link to="/register">Click here</Link>
         </span>
       </div>
     </form>

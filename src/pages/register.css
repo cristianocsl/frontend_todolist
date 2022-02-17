@@ -6,6 +6,10 @@
   justify-content: center;
 }
 
+.content-field {
+  margin: 10px 0 10px 0 !important;
+}
+
 .content-form {
   border-radius: 15px;
   box-shadow: 1px 4px 10px -2px black;

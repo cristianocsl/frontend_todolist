@@ -34,8 +34,8 @@ export default function Register() {
     >
       <div className="content-form">
         <TextField
-          sx={{ width: '100%' }}
           className="content-field"
+          sx={{ width: '100%' }}
           required
           id="outlined-required"
           label="name"
@@ -63,6 +63,7 @@ export default function Register() {
           onChange={ handleChange }
         />
         <Button
+          className="content-field"
           variant="contained"
           size="large"
           type="submit"
@@ -73,6 +74,7 @@ export default function Register() {
         hidden={ !errorMessage }
         >
           <Stack
+            className="content-field"
             sx={{ width: '100%' }}
             spacing={2}
             >

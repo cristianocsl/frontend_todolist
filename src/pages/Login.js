@@ -4,8 +4,6 @@ import './register.css';
 import { Alert, Button, Stack } from '@mui/material';
 import fetchByMethod from '../fecthApi';
 
-const POST_LOGIN = 'postLogin';
-
 export default function login() {
   const [errorMessage, setErrorMessage] = useState('');
   const [fields, setFields] = useState({
@@ -23,7 +21,7 @@ export default function login() {
 
   const handleSubmit = async(event) => {
     event.preventDefault();
-    const response = await fetchByMethod(POST_LOGIN, fields);
+    const response = await fetchByMethod.loginPost(fields);
     response.token ? setErrorMessage() : setErrorMessage(response);
     setFields({ ...fields, email: '', password: ''});
   };
@@ -38,7 +36,7 @@ export default function login() {
           sx={{ width: '100%' }}
           className="content-field"
           required
-          id="outlined-email-input"
+          id="outlined-email-input-login"
           label="email"
           type="email"
           name="email"
@@ -48,7 +46,7 @@ export default function login() {
           sx={{ width: '100%' }}
           className="content-field"
           required
-          id="outlined-password-input"
+          id="outlined-password-input-login"
           label="Password"
           type="password"
           name="password"

@@ -4,7 +4,7 @@
         "es2021": true
     },
     "extends": [
-        "eslint:recommended",
+        "trybe-frontend",
         "plugin:react/recommended"
     ],
     "parserOptions": {

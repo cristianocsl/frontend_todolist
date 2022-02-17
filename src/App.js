@@ -10,11 +10,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={ <Navigate replace to="/login" /> } />
-          <Route path="/register" element={ <Register />} />
           <Route path="/login" element={ <Login /> } />
+          <Route path="/register" element={ <Register />} />
         </Routes>
       </BrowserRouter>
-      <Register />
     </div>
   );
 }

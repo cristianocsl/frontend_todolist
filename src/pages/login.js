@@ -4,6 +4,8 @@ import './register.css';
 import { Alert, Button, Stack } from '@mui/material';
 import fetchByMethod from '../fecthApi';
 
+const POST_LOGIN = 'postLogin';
+
 export default function login() {
   const [errorMessage, setErrorMessage] = useState('');
   const [fields, setFields] = useState({
@@ -21,7 +23,7 @@ export default function login() {
 
   const handleSubmit = async(event) => {
     event.preventDefault();
-    const response = await fetchByMethod('postRegister', fields);
+    const response = await fetchByMethod(POST_LOGIN, fields);
     response.token ? setErrorMessage() : setErrorMessage(response);
     setFields({ ...fields, email: '', password: ''});
   };

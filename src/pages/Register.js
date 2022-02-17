@@ -22,7 +22,7 @@ export default function Register() {
 
   const handleSubmit = async(event) => {
     event.preventDefault();
-    const response = await fetchByMethod('post', fields);
+    const response = await fetchByMethod('postRegister', fields);
     response.token ? setErrorMessage() : setErrorMessage(response);
     setFields({ ...fields, name: '', email: '', password: ''});
   };

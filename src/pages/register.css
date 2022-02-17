@@ -15,9 +15,10 @@
   box-shadow: 1px 4px 10px -2px black;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 50vh;
   padding: 20px 20px 20px 20px;
   width: 300px;
-  min-height: 50vh;
 }
 
 @media screen and ( max-width: 912px ) {

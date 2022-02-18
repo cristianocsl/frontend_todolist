@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import './register.css';
 import { Alert, Button, Stack } from '@mui/material';
 import fetchByMethod from '../fecthApi';
 
 export default function login() {
+  const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState('');
   const [fields, setFields] = useState({
     email: '',
@@ -25,6 +26,7 @@ export default function login() {
     const response = await fetchByMethod.loginPost(fields);
     response.token ? setErrorMessage() : setErrorMessage(response);
     setFields({ ...fields, email: '', password: ''});
+    navigate('/tasks');
   };
 
   return (
@@ -59,7 +61,7 @@ export default function login() {
           size="large"
           type="submit"
         >
-          Login
+          Log In
         </Button>
         <span
         hidden={ !errorMessage }
@@ -77,7 +79,7 @@ export default function login() {
           </Stack>
         </span>
         <span>
-          New to here? <Link to="/register">Click here</Link>
+          New to here?  <Link to="/register">Sign Up</Link>
         </span>
       </div>
     </form>

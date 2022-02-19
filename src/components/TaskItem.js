@@ -3,22 +3,17 @@ import Box from '@mui/material/Box';
 import { InputLabel, FormControl, Select, TextField, IconButton, MenuItem } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { shape, string } from 'prop-types';
+import { shape, string, func } from 'prop-types';
 
-export default function TaskItem({ item }) {
-  const [taskObj, setTaskObj] = useState({status: item.status});
-
+export default function TaskItem({ item, sendChangesToFather }) {
+  const [textValue, setTextValue] = useState(item.task);
 
   const handleChangeSelect = (event) => {
-    setTaskObj({...taskObj, status: event.target.value});
+    sendChangesToFather({ _id: item._id, status: event.target.value, task: item.task});
   };
 
-  const handleChangeTextField = ({ target }) => {
-    const { name, value } = target;
-    setTaskObj({
-      ...taskObj,
-      [name]: value,
-    });
+  const handleChangeTextField = ({currentTarget}) => {
+    setTextValue(currentTarget.value);
   };
   
   const handleDelete = () => {};
@@ -26,6 +21,7 @@ export default function TaskItem({ item }) {
   const handleEdit = () => {};
 
   const options = ['To do', 'Pending', 'Done' ];
+
   return (
     <div
     key={item._id + 1}
@@ -37,7 +33,7 @@ export default function TaskItem({ item }) {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={taskObj.status}
+          value={item.status}
           defaultValue={item.status}
           name="select"
           onChange={handleChangeSelect}
@@ -58,8 +54,8 @@ export default function TaskItem({ item }) {
       id="outlined-text-input"
       type="text"
       name="text"
-      value={item.task}
-      onChange={ (e) => handleChangeTextField(e.currentTarget.value, item._id) }
+      value={textValue}
+      onChange={handleChangeTextField}
     />
     <IconButton onClick={ handleDelete }>
       <DeleteIcon />
@@ -79,4 +75,5 @@ TaskItem.propTypes = {
       status: string.isRequired,
       task: string.isRequired,
     }),
+  sendChangesToFather: func.isRequired,
 };

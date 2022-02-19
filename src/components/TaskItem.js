@@ -27,7 +27,7 @@ export default function TaskItem({ item, sendChangesToFather }) {
     key={item._id + 1}
     className="container-task"
   >
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 110 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Status</InputLabel>
         <Select

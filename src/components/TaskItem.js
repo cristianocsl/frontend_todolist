@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { InputLabel, FormControl, Select, TextField, IconButton, MenuItem } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
+import SaveIcon from '@mui/icons-material/Save';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { shape, string, func } from 'prop-types';
 import fetchByMethod from '../fecthApi';
@@ -10,6 +11,7 @@ import './taskitem.css';
 
 export default function TaskItem({ item, sendChangesToFather }) {
   const [textValue, setTextValue] = useState(item.task);
+  const [saveButton, setSaveButton] = useState(false);
   
   const handleChangeSelect = async (event) => {
     const taskInfo = { task: item.task, status: event.target.value };
@@ -23,7 +25,15 @@ export default function TaskItem({ item, sendChangesToFather }) {
   
   const handleDelete = () => {};
 
-  const handleEdit = () => {};
+  const renderSaveButton = () => {
+    return !saveButton ? <EditIcon /> : <SaveIcon />;
+  };
+
+  const handleEdit = () => {
+    setSaveButton((prevState) => !prevState);
+  };
+
+  // const choseSaveOrEditButton = () => {};
 
   const options = ['To do', 'Pending', 'Done' ];
 
@@ -57,11 +67,17 @@ export default function TaskItem({ item, sendChangesToFather }) {
         </FormControl>
       </Box>
       <div className="buttons-container">
-        <IconButton onClick={ handleDelete } className="icon-button">
+        <IconButton
+          onClick={ handleDelete }
+          className="icon-button"
+        >
           <DeleteIcon />
         </IconButton>
-        <IconButton onClick={ handleEdit } className="icon-button">
-          <EditIcon />
+        <IconButton
+          onClick={ handleEdit }
+          className="icon-button"
+        >
+          {renderSaveButton()}
         </IconButton>
       </div>
     </div>

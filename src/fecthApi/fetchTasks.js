@@ -7,7 +7,6 @@ const fetchTasks = async () => {
 
   try {
     const { data } = await axios.get(`${URL_API}task`, token);
-    axios.defaults.headers['userName'] = data[0].name;
 
     return data;
   } catch (error) {

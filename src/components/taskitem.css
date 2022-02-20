@@ -1,5 +1,5 @@
 .icon-button {
-  border: rgb(190, 190, 190) solid 1px !important;
+  border: 0 !important;
   border-radius: 5px !important;
 }
 
@@ -8,8 +8,11 @@
 }
 
 .container-task {
+  border: rgb(190, 190, 190) 1px solid;
+  border-radius: 5px !important;
   display: flex;
   flex-direction: column;
+  padding: 8px 3px 8px 3px;
   margin: 10px 5px 10px 5px;
 }
 
@@ -25,5 +28,6 @@
   justify-content: space-between;
 }
 .select {
+  border: 0 !important;
   width: 100%;
 }

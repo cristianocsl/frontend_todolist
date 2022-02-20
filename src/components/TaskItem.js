@@ -70,7 +70,10 @@ export default function TaskItem({ item, sendChangesToFather }) {
 
     <div className="select-edit-remove">
       <Box className="select">
-        <FormControl fullWidth>
+        <FormControl
+        fullWidth
+        variant="standard"
+        >
           <InputLabel id="demo-simple-select-label">Status</InputLabel>
           <Select
             labelId="demo-simple-select-label"

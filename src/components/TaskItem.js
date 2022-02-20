@@ -4,13 +4,17 @@ import { InputLabel, FormControl, Select, TextField, IconButton, MenuItem } from
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { shape, string, func } from 'prop-types';
+import fetchByMethod from '../fecthApi';
+
 import './taskitem.css';
 
 export default function TaskItem({ item, sendChangesToFather }) {
   const [textValue, setTextValue] = useState(item.task);
-
-  const handleChangeSelect = (event) => {
-    sendChangesToFather({ _id: item._id, status: event.target.value, task: item.task});
+  
+  const handleChangeSelect = async (event) => {
+    const taskInfo = { task: item.task, status: event.target.value };
+    sendChangesToFather({ _id: item._id, ...taskInfo });
+    await fetchByMethod.fetchUpdateTask(item._id, taskInfo);
   };
 
   const handleChangeTextField = ({currentTarget}) => {

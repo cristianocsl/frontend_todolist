@@ -13,8 +13,6 @@ export default function Register() {
     password: '',
   });
 
-  console.log('fields ->', fields);
-
   const handleChange = ({ target }) => {
     const { name, value } = target;
     setFields({

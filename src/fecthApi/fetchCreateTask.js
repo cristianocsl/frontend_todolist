@@ -2,11 +2,13 @@ import axios from 'axios';
 
 const URL_API = 'http://backent-todolist-01.herokuapp.com';
 
-const fetchCreateTasks = async (task) => {
+const fetchCreateTask = async (task) => {
   const token = axios.defaults.headers.common['Authorization'];
 
   try {
-    const { data } = await axios.post(`${URL_API}/task`, task, token);
+    const { data } = await axios.post(`${URL_API}/task`, task, {
+      headers: { Authorization: token },
+    });
 
     return data;
   } catch (error) {
@@ -14,4 +16,4 @@ const fetchCreateTasks = async (task) => {
   }
 };
 
-export default fetchCreateTasks;
+export default fetchCreateTask;

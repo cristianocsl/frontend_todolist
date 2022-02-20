@@ -12,7 +12,7 @@ import './taskitem.css';
 export default function TaskItem({ item, sendChangesToFather }) {
   const [textValue, setTextValue] = useState(item.task);
   const [saveButton, setSaveButton] = useState(false);
-  
+
   const handleChangeSelect = async (event) => {
     const taskInfo = { task: item.task, status: event.target.value };
     sendChangesToFather({ _id: item._id, ...taskInfo });
@@ -29,13 +29,19 @@ export default function TaskItem({ item, sendChangesToFather }) {
     return !saveButton ? <EditIcon /> : <SaveIcon />;
   };
 
+  console.log('save button', saveButton);
   const handleEdit = () => {
+    saveButton ? '' : '';
     setSaveButton((prevState) => !prevState);
   };
 
   // const choseSaveOrEditButton = () => {};
 
   const options = ['To do', 'Pending', 'Done' ];
+
+  const chooseVariant = () => !saveButton ? 'outlined' : 'filled';
+
+  const chooseLabel = () => !saveButton ? '' : 'Editando';
 
   return (
     <div
@@ -44,6 +50,22 @@ export default function TaskItem({ item, sendChangesToFather }) {
   >
     <div className="date">
       Criado em: { item.createdAt.split(' ')[0] }
+    </div>
+
+    <div>
+      <TextField
+        key={item._id}
+        label={ chooseLabel() }
+        variant={ chooseVariant() }
+        sx={{ width: '100%' }}
+        className="content-field"
+        required
+        id="outlined-text-input"
+        type="text"
+        name="text"
+        value={textValue}
+        onChange={handleChangeTextField}
+        />
     </div>
 
     <div className="select-edit-remove">
@@ -80,19 +102,6 @@ export default function TaskItem({ item, sendChangesToFather }) {
           {renderSaveButton()}
         </IconButton>
       </div>
-    </div>
-    <div>
-      <TextField
-        key={item._id}
-        sx={{ width: '100%' }}
-        className="content-field"
-        required
-        id="outlined-text-input"
-        type="text"
-        name="text"
-        value={textValue}
-        onChange={handleChangeTextField}
-        />
     </div>
   </div>
   );

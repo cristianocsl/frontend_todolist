@@ -81,7 +81,6 @@ export default function TaskItem({ item, sendChangesToFather }) {
 TaskItem.propTypes = {
   item: shape({
       _id: string.isRequired,
-      name: string.isRequired,
       status: string.isRequired,
       task: string.isRequired,
       createdAt: string.isRequired,

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
-import './register.css';
 import { Alert, Button, Stack } from '@mui/material';
 import fetchByMethod from '../fecthApi';
+import './register.css';
 
 export default function Register() {
   const [errorMessage, setErrorMessage] = useState('');
@@ -11,6 +12,8 @@ export default function Register() {
     email: '',
     password: '',
   });
+
+  console.log('fields ->', fields);
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
@@ -84,6 +87,9 @@ export default function Register() {
               { errorMessage }
             </Alert>
           </Stack>
+        </span>
+        <span>
+          Go back to <Link to="/login">Log In</Link>
         </span>
       </div>
     </form>

@@ -6,7 +6,7 @@ const fetchCreateTasks = async (task) => {
   const token = axios.defaults.headers.common['Authorization'];
 
   try {
-    const { data } = await axios.get(`${URL_API}/task`, task, token);
+    const { data } = await axios.post(`${URL_API}/task`, task, token);
 
     return data;
   } catch (error) {

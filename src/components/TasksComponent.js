@@ -11,6 +11,8 @@ export default function TasksComponent() {
     setTasks(data);
   }, []);
 
+  console.log(tasks);
+
   const handleChange = (taskObj) => {
     const found = tasks.map((item) => {
       if (item._id === taskObj._id) return {

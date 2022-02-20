@@ -25,7 +25,7 @@ export default function TaskItem({ item, sendChangesToFather }) {
   
   const handleDelete = () => {};
 
-  const renderSaveButton = () => {
+  const renderSaveOrEditButton = () => {
     return !saveButton ? <EditIcon /> : <SaveIcon />;
   };
 
@@ -99,7 +99,7 @@ export default function TaskItem({ item, sendChangesToFather }) {
           onClick={ handleEdit }
           className="icon-button"
         >
-          {renderSaveButton()}
+          {renderSaveOrEditButton()}
         </IconButton>
       </div>
     </div>

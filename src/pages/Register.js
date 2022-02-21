@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
-import { Alert, Button, Stack } from '@mui/material';
+import { Alert, Button, Stack, Box } from '@mui/material';
+import AddTaskIcon from '@mui/icons-material/AddTask';
+import { colors } from '@mui/material/';
 import fetchByMethod from '../fecthApi';
 import './register.css';
 
@@ -39,6 +41,11 @@ export default function Register() {
       onSubmit={ handleSubmit }
     >
       <div className="content-form">
+        <div>
+          <AddTaskIcon sx={{ fontSize: 150, color: colors.blue[800] }} />
+          <Box sx={{ fontSize: 50, color: colors.blue[600] }} >Add</Box>
+          <Box sx={{ fontSize: 35, color: colors.blue[300] }} >Task</Box>
+        </div>
         <TextField
           className="content-field"
           sx={{ width: '100%' }}

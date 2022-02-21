@@ -7,7 +7,7 @@ import './taskPage.css';
 export default function TasksPage() {
   return (
     <div>
-      <h2>Olá, {axios.defaults.headers['userName']}!</h2>
+      <h1>Olá, {axios.defaults.headers['userName']}!</h1>
       <TasksComponent />
     </div>
   );

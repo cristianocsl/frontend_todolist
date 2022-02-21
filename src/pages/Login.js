@@ -7,7 +7,8 @@ import fetchByMethod from '../fecthApi';
 
 export default function login() {
   const navigate = useNavigate();
-  const [apiMessage, setApiMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
   const [fields, setFields] = useState({
     email: '',
     password: '',
@@ -24,9 +25,11 @@ export default function login() {
   const handleSubmit = async(event) => {
     event.preventDefault();
     const response = await fetchByMethod.loginPost(fields);
-    response.token ? setApiMessage() : setApiMessage(response);
-    setFields({ ...fields, email: '', password: ''});
-    navigate('/tasks');
+
+    !response.token
+      ? setErrorMessage(response)
+      : setSuccessMessage(response.message)
+      & setTimeout(() => navigate('/tasks'), 3000);
   };
 
   return (
@@ -64,7 +67,7 @@ export default function login() {
           Log In
         </Button>
         <span
-        hidden={ !apiMessage }
+        hidden={ !errorMessage || successMessage }
         >
           <Stack
             className="content-field"
@@ -74,7 +77,22 @@ export default function login() {
             <Alert
               severity="error"
             >
-              { apiMessage }
+              { errorMessage }
+            </Alert>
+          </Stack>
+        </span>
+        <span
+        hidden={ !successMessage }
+        >
+          <Stack
+            className="content-field"
+            sx={{ width: '100%' }}
+            spacing={2}
+            >
+            <Alert
+              severity="success"
+            >
+              { successMessage }
             </Alert>
           </Stack>
         </span>

@@ -1,0 +1,33 @@
+.icon-button {
+  border: 0 !important;
+  border-radius: 5px !important;
+}
+
+.buttons-container {
+  display: flex;
+}
+
+.container-task {
+  border: rgb(190, 190, 190) 1px solid;
+  border-radius: 5px !important;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 3px 8px 3px;
+  margin: 10px 5px 10px 5px;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  min-height:25px;
+}
+
+.select-edit-remove {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.select {
+  border: 0 !important;
+  width: 100%;
+}

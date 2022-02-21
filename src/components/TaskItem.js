@@ -25,18 +25,36 @@ export default function TaskItem({ item, sendChangesToFather }) {
   
   const handleDelete = () => {};
 
-  const renderSaveOrEditButton = () => {
-    return !saveButton ? <EditIcon /> : <SaveIcon />;
-  };
+  const renderEditButton = () => (
+    <IconButton
+      onClick={ () => setSaveButton((prevState) => !prevState) }
+      className="icon-button"
+    >
+      <EditIcon />
+    </IconButton>
+  );
 
-  console.log('save button', saveButton);
-  const handleEdit = () => {
-    saveButton ? '' : '';
+  const handleSave = async (event) => {
+    event.preventDefault();
+    const taskInfo = { task: textValue, status: item.status };
+    sendChangesToFather({ _id: item._id, ...taskInfo });
+    await fetchByMethod.fetchUpdateTask(item._id, taskInfo);
     setSaveButton((prevState) => !prevState);
   };
 
-  // const choseSaveOrEditButton = () => {};
-
+  const renderSaveButton = () => (
+    <IconButton
+      onClick={ handleSave }
+      className="icon-button"
+      >
+      <SaveIcon />
+    </IconButton>
+  );
+  
+  const renderSaveOrEditButton = () => {
+    return !saveButton ? renderEditButton() : renderSaveButton();
+  };
+  
   const options = ['To do', 'Pending', 'Done' ];
 
   const chooseVariant = () => !saveButton ? 'outlined' : 'filled';
@@ -47,14 +65,17 @@ export default function TaskItem({ item, sendChangesToFather }) {
     <div
     key={item._id + 1}
     className="container-task"
-  >
+    >
     <div className="date">
       Criado em: { item.createdAt.split(' ')[0] }
     </div>
 
-    <div>
+    <div
+      className="buttons-container"
+      >
       <TextField
         key={item._id}
+        onKeyPress={ (event) => event.key === 'Enter' && handleSave(event) }
         label={ chooseLabel() }
         variant={ chooseVariant() }
         sx={{ width: '100%' }}
@@ -64,8 +85,10 @@ export default function TaskItem({ item, sendChangesToFather }) {
         type="text"
         name="text"
         value={textValue}
-        onChange={handleChangeTextField}
-        />
+        disabled={!saveButton}
+        onChange={ handleChangeTextField }
+      />
+        { renderSaveOrEditButton() }
     </div>
 
     <div className="select-edit-remove">
@@ -91,18 +114,12 @@ export default function TaskItem({ item, sendChangesToFather }) {
           </Select>
         </FormControl>
       </Box>
-      <div className="buttons-container">
+      <div>
         <IconButton
           onClick={ handleDelete }
           className="icon-button"
         >
           <DeleteIcon />
-        </IconButton>
-        <IconButton
-          onClick={ handleEdit }
-          className="icon-button"
-        >
-          {renderSaveOrEditButton()}
         </IconButton>
       </div>
     </div>

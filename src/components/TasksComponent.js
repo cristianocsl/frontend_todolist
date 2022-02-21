@@ -57,7 +57,7 @@ export default function TasksComponent() {
       </form>
       {
         tasks.map((item, index) => (
-          <TaskItem item={item} key={index} sendChangesToFather={handleChange} />
+          <TaskItem item={item} key={index} sendChangesToFather={ handleChange } />
         ))
       }
     </div>

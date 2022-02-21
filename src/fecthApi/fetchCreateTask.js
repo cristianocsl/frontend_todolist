@@ -1,8 +1,5 @@
 import axios from 'axios';
-
-
-
-const URL_API = 'https://backend-todo-list-cristiano.herokuapp.com';
+import { URL_API } from './urlApi';
 
 const fetchCreateTask = async (task) => {
   const token = axios.defaults.headers.common['Authorization'];

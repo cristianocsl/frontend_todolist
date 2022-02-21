@@ -9,7 +9,8 @@ const fetchUserLogin = async (userData) => {
     localStorage.setItem('token', JSON.stringify(data.token));
     axios.defaults.headers['userName'] = data.name;
 
-    return data;
+    
+    return { ...data, message: 'User successfully login!' };
   } catch (error) {
     return error.response.data.message;
   }

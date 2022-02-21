@@ -7,7 +7,7 @@ const fetchUserRegister = async (userData) => {
     axios.defaults.headers.common['Authorization'] = data.token;
     axios.defaults.headers['userName'] = data.name;
 
-    return data;
+    return { ...data, message: 'User successfully registered! You will be redirected to login page!' };
   } catch (error) {
     return error.response.data.message;
   }

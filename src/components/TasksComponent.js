@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import fetchByMethod from '../fecthApi';
-import { TextField, IconButton } from '@mui/material';
+import { TextField, IconButton, CircularProgress } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 // import fetchCreateTask from '../fecthApi/fetchCreateTask';
 import TaskItem from './TaskItem';
-
 import './taskComponent.css';
 
 export default function TasksComponent() {
@@ -34,6 +33,8 @@ export default function TasksComponent() {
     });
     setTasks(found);
   };
+
+  if (!tasks.length) return <CircularProgress color="inherit" />;
 
   return (
     <div className="container">

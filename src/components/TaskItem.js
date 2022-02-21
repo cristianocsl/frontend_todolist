@@ -9,7 +9,7 @@ import fetchByMethod from '../fecthApi';
 
 import './taskitem.css';
 
-export default function TaskItem({ item, sendChangesToFather }) {
+export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFather }) {
   const [textValue, setTextValue] = useState(item.task);
   const [saveButton, setSaveButton] = useState(false);
 
@@ -25,7 +25,7 @@ export default function TaskItem({ item, sendChangesToFather }) {
   
   const handleDelete = async () => {
     await fetchByMethod.fetchRemoveTask(item._id);
-    sendChangesToFather({ _id: item._id });
+    handleDeleteOnFather({ _id: item._id });
   };
 
   const renderEditButton = () => (
@@ -138,4 +138,5 @@ TaskItem.propTypes = {
       createdAt: string.isRequired,
     }),
   sendChangesToFather: func.isRequired,
+  handleDeleteOnFather: func.isRequired,
 };

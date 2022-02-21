@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import './register.css';
-import { Alert, Button, Stack } from '@mui/material';
+import { Alert, Box, Button, Stack } from '@mui/material';
+import AddTaskIcon from '@mui/icons-material/AddTask';
 import fetchByMethod from '../fecthApi';
+import { colors } from '@mui/material/';
 
 export default function login() {
   const navigate = useNavigate();
@@ -38,6 +40,11 @@ export default function login() {
       onSubmit={ handleSubmit }
     >
       <div className="content-form">
+        <div>
+          <AddTaskIcon sx={{ fontSize: 170, color: colors.blue[800] }} />
+          <Box sx={{ fontSize: 60, color: colors.blue[600] }} >Add</Box>
+          <Box sx={{ fontSize: 40, color: colors.blue[300] }} >Task</Box>
+        </div>
         <TextField
           sx={{ width: '100%' }}
           className="content-field"

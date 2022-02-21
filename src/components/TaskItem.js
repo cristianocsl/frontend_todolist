@@ -23,7 +23,10 @@ export default function TaskItem({ item, sendChangesToFather }) {
     setTextValue(currentTarget.value);
   };
   
-  const handleDelete = () => {};
+  const handleDelete = async () => {
+    await fetchByMethod.fetchRemoveTask(item._id);
+    sendChangesToFather({ _id: item._id });
+  };
 
   const renderEditButton = () => (
     <IconButton

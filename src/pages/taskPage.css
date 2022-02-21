@@ -2,3 +2,20 @@
   display: flex;
   margin: 10px 5px 10px 5px;
 }
+
+.add-task-logo {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 5px 10px 5px;
+}
+
+.header-task-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center !important;
+}
+
+h3 {
+  margin: 0;
+}

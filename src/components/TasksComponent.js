@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import fetchByMethod from '../fecthApi';
-import { TextField, IconButton, CircularProgress } from '@mui/material';
+import { TextField, IconButton } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-// import fetchCreateTask from '../fecthApi/fetchCreateTask';
 import TaskItem from './TaskItem';
 import './taskComponent.css';
 
 export default function TasksComponent() {
   const [tasks, setTasks] = useState([]);
   const [textField, setTextField] = useState({ task: '' });
-  
+
   const handleAddTask =  async (event) => {
     event.preventDefault();
 
@@ -34,7 +33,10 @@ export default function TasksComponent() {
     setTasks(found);
   };
 
-  if (!tasks.length) return <CircularProgress color="inherit" />;
+  const handleDeleteOnFather = (taskId) => {
+    const notDeleted = tasks.filter(({ _id }) => _id !== taskId._id);
+    setTasks(notDeleted);
+  };
 
   return (
     <div className="container">
@@ -58,7 +60,12 @@ export default function TasksComponent() {
       </form>
       {
         tasks.map((item, index) => (
-          <TaskItem item={item} key={index} sendChangesToFather={ handleChange } />
+          <TaskItem
+            item={item}
+            key={index}
+            sendChangesToFather={ handleChange }
+            handleDeleteOnFather={ handleDeleteOnFather }
+          />
         ))
       }
     </div>

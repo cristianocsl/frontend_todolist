@@ -7,7 +7,7 @@ import fetchByMethod from '../fecthApi';
 
 export default function login() {
   const navigate = useNavigate();
-  const [errorMessage, setErrorMessage] = useState('');
+  const [apiMessage, setApiMessage] = useState('');
   const [fields, setFields] = useState({
     email: '',
     password: '',
@@ -24,7 +24,7 @@ export default function login() {
   const handleSubmit = async(event) => {
     event.preventDefault();
     const response = await fetchByMethod.loginPost(fields);
-    response.token ? setErrorMessage() : setErrorMessage(response);
+    response.token ? setApiMessage() : setApiMessage(response);
     setFields({ ...fields, email: '', password: ''});
     navigate('/tasks');
   };
@@ -64,7 +64,7 @@ export default function login() {
           Log In
         </Button>
         <span
-        hidden={ !errorMessage }
+        hidden={ !apiMessage }
         >
           <Stack
             className="content-field"
@@ -74,7 +74,7 @@ export default function login() {
             <Alert
               severity="error"
             >
-              { errorMessage }
+              { apiMessage }
             </Alert>
           </Stack>
         </span>

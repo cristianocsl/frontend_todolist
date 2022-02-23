@@ -4,6 +4,7 @@ import { TextField, IconButton } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import TaskItem from './TaskItem';
 import './taskComponent.css';
+import axios from 'axios';
 
 export default function TasksComponent() {
   const [tasks, setTasks] = useState([]);
@@ -19,6 +20,8 @@ export default function TasksComponent() {
   };
   
   useEffect(async () => {
+    const tokenLocalStorage = JSON.parse(localStorage.getItem('token'));
+    axios.defaults.headers.common['Authorization'] = tokenLocalStorage;
     const data = await fetchByMethod.fetchAllTasks();
     setTasks(data);
   }, []);

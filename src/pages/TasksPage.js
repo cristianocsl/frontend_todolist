@@ -3,7 +3,8 @@ import TasksComponent from '../components/TasksComponent';
 import { Box } from '@mui/material';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import { colors } from '@mui/material/';
-import axios from 'axios';
+import { getUserName } from '../localStorage';
+
 
 import './taskPage.css';
 
@@ -18,7 +19,7 @@ export default function TasksPage() {
         </div>
         <h3>
           <Box sx={{ color: colors.blue[900] }}>
-            Olá, {axios.defaults.headers['userName']}!
+            Olá, { getUserName() }!
           </Box>
         </h3>
       </div>

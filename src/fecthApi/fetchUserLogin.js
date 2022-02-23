@@ -7,8 +7,7 @@ const fetchUserLogin = async (userData) => {
     const { data } = await axios.post(`${URL_API}/login`, userData);
     axios.defaults.headers.common['Authorization'] = data.token;
     localStorage.setItem('token', JSON.stringify(data.token));
-    axios.defaults.headers['userName'] = data.name;
-
+    localStorage.setItem('userName', JSON.stringify(data.name));
     
     return { ...data, message: 'User successfully login!' };
   } catch (error) {

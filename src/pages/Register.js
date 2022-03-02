@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
-import { Alert, Button, Stack, Box } from '@mui/material';
+import { Alert, Button, Stack, Box, LinearProgress } from '@mui/material';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import { colors } from '@mui/material/';
 import fetchByMethod from '../fecthApi';
@@ -11,6 +11,7 @@ export default function Register() {
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const [loading, setLoading] = useState(false);
   const [fields, setFields] = useState({
     name: '',
     email: '',
@@ -25,6 +26,8 @@ export default function Register() {
     });
   };
 
+  console.log('loading >>', loading);
+
   const handleSubmit = async(event) => {
     event.preventDefault();
     const response = await fetchByMethod.postRegister(fields);
@@ -33,6 +36,10 @@ export default function Register() {
       ? setErrorMessage(response)
       : setSuccessMessage(response.message)
       & setTimeout(() => navigate('/login'), 4500);
+    
+    !errorMessage
+      ? setLoading((prevState) => prevState)
+      : setLoading((prevState) => !prevState);
   };
 
   return (
@@ -42,9 +49,10 @@ export default function Register() {
     >
       <div className="content-form">
         <div>
-          <AddTaskIcon sx={{ fontSize: 150, color: colors.blue[800] }} />
-          <Box sx={{ fontSize: 50, color: colors.blue[600] }} >Add</Box>
-          <Box sx={{ fontSize: 35, color: colors.blue[300] }} >Task</Box>
+          <AddTaskIcon sx={{ fontSize: 125, color: colors.blue[800] }} />
+          <Box sx={{ fontSize: 30, color: colors.blue[600] }} >Add</Box>
+          <Box sx={{ fontSize: 20, color: colors.blue[300] }} >Task</Box>
+          { loading ? <LinearProgress /> : '' }
         </div>
         <TextField
           className="content-field"

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import './register.css';
-import { Alert, Box, Button, Stack } from '@mui/material';
+import { Alert, Box, Button, LinearProgress, Stack } from '@mui/material';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import fetchByMethod from '../fecthApi';
 import { colors } from '@mui/material/';
@@ -11,6 +11,7 @@ export default function login() {
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const [loading, setLoading] = useState(false);
   const [fields, setFields] = useState({
     email: '',
     password: '',
@@ -32,6 +33,8 @@ export default function login() {
       ? setErrorMessage(response)
       : setSuccessMessage(response.message)
       & setTimeout(() => navigate('/tasks'), 3000);
+    
+    setLoading((prevState) => !prevState);
   };
 
   return (
@@ -44,6 +47,7 @@ export default function login() {
           <AddTaskIcon sx={{ fontSize: 170, color: colors.blue[800] }} />
           <Box sx={{ fontSize: 60, color: colors.blue[600] }} >Add</Box>
           <Box sx={{ fontSize: 40, color: colors.blue[300] }} >Task</Box>
+          { loading ? <LinearProgress /> : '' }
         </div>
         <TextField
           sx={{ width: '100%' }}
@@ -74,7 +78,7 @@ export default function login() {
           Log In
         </Button>
         <span
-        hidden={ !errorMessage || successMessage }
+          hidden={ !errorMessage || successMessage }
         >
           <Stack
             className="content-field"

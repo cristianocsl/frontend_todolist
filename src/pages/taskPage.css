@@ -16,6 +16,12 @@
   text-align: center !important;
 }
 
+.logout-icon {
+  position: absolute;
+  right: 2px;
+  top: 15px;
+}
+
 h3 {
   margin: 0;
 }

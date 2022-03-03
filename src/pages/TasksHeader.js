@@ -33,7 +33,7 @@ export default function TasksPage() {
         >
           <LogoutIcon
             sx={{ fontSize: 25, color: colors.blue[900] }}
-            onClick={ () => navigate('/login') }
+            onClick={ () => navigate('/login') & localStorage.clear() }
           />
         </Button>
       </ div>

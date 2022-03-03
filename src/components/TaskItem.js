@@ -70,7 +70,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
     className="container-task"
     >
     <div className="date">
-      Criado em: { item.createdAt.split(' ')[0] }
+      Criado em { item.createdAt.split(' ')[0] }
     </div>
 
     <div

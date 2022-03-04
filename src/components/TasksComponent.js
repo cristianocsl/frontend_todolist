@@ -1,20 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import fetchByMethod from '../fecthApi';
-import { TextField, IconButton, Button } from '@mui/material';
+import { TextField, IconButton } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import TaskItem from './TaskItem';
 import './taskComponent.css';
 import { setTokenInAxios } from '../localStorage';
-import filterAlphabetically from '../filters';
+import { filter } from '../filters';
 import axios from 'axios';
+import FilterButton from './FilterButton';
 
 export default function TasksComponent() {
   const [tasks, setTasks] = useState([]);
   const [textField, setTextField] = useState({ task: '' });
 
-  const handleClick = () => {
+  const handleClickAlpha = () => {
     const tasksCopy = [...tasks];
-    const filtered = filterAlphabetically(tasksCopy);
+    const filtered = filter.alphabetically(tasksCopy);
+    setTasks(filtered);
+  };
+
+  
+  const handleClickDate = () => {
+    const tasksCopy = [...tasks];
+    const filtered = filter.byDate(tasksCopy);
     setTasks(filtered);
   };
 
@@ -69,15 +77,14 @@ export default function TasksComponent() {
         </IconButton>
       </form>
       <div>
-      <Button
-          className="content-field"
-          variant="contained"
-          size="large"
-          type="button"
-          onClick={ handleClick }
-        >
-          Ordem Alfabética
-        </Button>
+        <FilterButton
+          text="Alfabética"
+          handleClick={ handleClickAlpha }
+        />
+        <FilterButton
+          text="Data"
+          handleClick={ handleClickDate }
+        />
       </div>
       {
         tasks.map((item) => (

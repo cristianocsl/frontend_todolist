@@ -7,22 +7,35 @@ import './taskComponent.css';
 import { setTokenInAxios } from '../localStorage';
 import { filter } from '../filters';
 import axios from 'axios';
+import { FaSortAlphaDown, FaSortAlphaDownAlt } from 'react-icons/fa';
+import { BsCalendarDateFill, BsSortNumericDown, BsSortNumericDownAlt } from 'react-icons/bs';
 import FilterButton from './FilterButton';
 
 export default function TasksComponent() {
   const [tasks, setTasks] = useState([]);
   const [textField, setTextField] = useState({ task: '' });
 
-  const handleClickAlpha = () => {
+  const handleClickAtoZ = () => {
     const tasksCopy = [...tasks];
-    const filtered = filter.alphabetically(tasksCopy);
+    const filtered = filter.AtoZ(tasksCopy);
     setTasks(filtered);
   };
 
-  
-  const handleClickDate = () => {
+  const handleClickZtoA = () => {
     const tasksCopy = [...tasks];
-    const filtered = filter.byDate(tasksCopy);
+    const filtered = filter.ZtoA(tasksCopy);
+    setTasks(filtered);
+  };
+  
+  const handleClickDateUp = () => {
+    const tasksCopy = [...tasks];
+    const filtered = filter.byDateUp(tasksCopy);
+    setTasks(filtered);
+  };
+    
+  const handleClickDateDown = () => {
+    const tasksCopy = [...tasks];
+    const filtered = filter.byDateDown(tasksCopy);
     setTasks(filtered);
   };
 
@@ -83,12 +96,20 @@ export default function TasksComponent() {
       </div>
       <div>
         <FilterButton
-          text="Alfabética"
-          handleClick={ handleClickAlpha }
+          text={ <FaSortAlphaDown /> }
+          handleClick={ handleClickAtoZ }
         />
         <FilterButton
-          text="Data"
-          handleClick={ handleClickDate }
+          text={ <FaSortAlphaDownAlt /> }
+          handleClick={ handleClickZtoA }
+        />
+        <FilterButton
+          text={ <><BsSortNumericDown /> <BsCalendarDateFill /></> }
+          handleClick={ handleClickDateUp }
+        />
+        <FilterButton
+          text={ <><BsSortNumericDownAlt /> <BsCalendarDateFill /></> }
+          handleClick={ handleClickDateDown }
         />
       </div>
       {

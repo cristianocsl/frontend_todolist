@@ -1,3 +1,9 @@
 .container-task {
   display: flex;
 }
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

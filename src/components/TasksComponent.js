@@ -121,13 +121,16 @@ export default function TasksComponent() {
           variant="outlined"
           size="large"
           type="button"
-          sx={{ weight: '100%' }}
+          sx={{ height: '31px' }}
           onClick={ () => setShowFilters((prevState) => !prevState) }
         >
           Filtros
         </Button>
       </div>
-      <div hidden={hideFilters}>
+      <div
+        hidden={hideFilters}
+        className="filter-buttons"
+      >
         {
           contentFilterButtons.map(({ text, handleClick, heightValue}) => <FilterButton
             key={ uuidv4() }

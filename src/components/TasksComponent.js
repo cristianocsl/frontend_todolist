@@ -77,6 +77,7 @@ export default function TasksComponent() {
         </IconButton>
       </form>
       <div>
+        Filtros
         <FilterButton
           text="Alfabética"
           handleClick={ handleClickAlpha }

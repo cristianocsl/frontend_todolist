@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import fetchByMethod from '../fecthApi';
-import { TextField, IconButton } from '@mui/material';
+import { TextField, IconButton, Button } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import TaskItem from './TaskItem';
 import './taskComponent.css';
 import { setTokenInAxios } from '../localStorage';
+import filterAlphabetically from '../filters';
 import axios from 'axios';
 
 export default function TasksComponent() {
   const [tasks, setTasks] = useState([]);
   const [textField, setTextField] = useState({ task: '' });
+
+  const handleClick = () => {
+    const tasksCopy = [...tasks];
+    const filtered = filterAlphabetically(tasksCopy);
+    setTasks(filtered);
+  };
 
   const handleAddTask =  async (event) => {
     event.preventDefault();
@@ -22,8 +29,6 @@ export default function TasksComponent() {
   
   useEffect(async () => {
     await setTokenInAxios(axios);
-    // const tokenLocalStorage = JSON.parse(localStorage.getItem('token'));
-    // axios.defaults.headers.common['Authorization'] = tokenLocalStorage;
     const data = await fetchByMethod.fetchAllTasks();
     setTasks(data);
   }, []);
@@ -63,11 +68,22 @@ export default function TasksComponent() {
           <AddIcon />
         </IconButton>
       </form>
+      <div>
+      <Button
+          className="content-field"
+          variant="contained"
+          size="large"
+          type="button"
+          onClick={ handleClick }
+        >
+          Ordem Alfabética
+        </Button>
+      </div>
       {
-        tasks.map((item, index) => (
+        tasks.map((item) => (
           <TaskItem
             item={item}
-            key={index}
+            key={item._id}
             sendChangesToFather={ handleChange }
             handleDeleteOnFather={ handleDeleteOnFather }
           />

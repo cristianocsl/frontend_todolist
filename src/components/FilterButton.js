@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@mui/material';
-import { string, func } from 'prop-types';
+import { string, func, shape, oneOfType } from 'prop-types';
 
 
 const FilterButton = ({ text, handleClick, heightValue }) =>{
@@ -19,7 +19,7 @@ const FilterButton = ({ text, handleClick, heightValue }) =>{
 export default FilterButton;
 
 FilterButton.propTypes = {
-  text: string.isRequired,
+  text: oneOfType([string, shape({})]).isRequired,
   heightValue: string,
   handleClick: func.isRequired,
 };

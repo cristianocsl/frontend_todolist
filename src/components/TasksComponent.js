@@ -32,11 +32,22 @@ export default function TasksComponent() {
     const filtered = filter.byNewDate(tasksCopy);
     setTasks(filtered);
   };
-    
+  
   const handleClickOldDate = () => {
     const tasksCopy = [...tasks];
     const filtered = filter.byOldDate(tasksCopy);
     setTasks(filtered);
+  };
+
+  const contentFilterButtons = [
+    { text: <FaSortAlphaUp />, handleClick: handleClickAtoZ },
+    { text: <FaSortAlphaUpAlt />, handleClick: handleClickZtoA },
+    { text: <><FaSortNumericUpAlt /> <BsCalendarDateFill /></>, handleClick: handleClickOldDate },
+    { text: <><FaSortNumericUp /> <BsCalendarDateFill /></>, handleClick: handleClickNewDate },
+  ];
+  
+  const handleClickStatus = () => {
+    
   };
 
   const handleAddTask =  async (event) => {
@@ -95,21 +106,18 @@ export default function TasksComponent() {
         </h3>
       </div>
       <div>
+        {
+          contentFilterButtons.map(({ text, handleClick}) => <FilterButton
+            key={text + 1}
+            text={ text }
+            handleClick={ handleClick }
+          />)
+        }
+      </div>
+      <div>
         <FilterButton
-          text={ <FaSortAlphaUp /> }
-          handleClick={ handleClickAtoZ }
-        />
-        <FilterButton
-          text={ <FaSortAlphaUpAlt /> }
-          handleClick={ handleClickZtoA }
-        />
-        <FilterButton
-          text={ <><FaSortNumericUpAlt /> <BsCalendarDateFill /></> }
-          handleClick={ handleClickNewDate }
-        />
-        <FilterButton
-          text={ <><FaSortNumericUp /> <BsCalendarDateFill /></> }
-          handleClick={ handleClickOldDate }
+          text="Pending"
+          handleClick={ handleClickStatus }
         />
       </div>
       {

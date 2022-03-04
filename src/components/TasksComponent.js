@@ -7,8 +7,8 @@ import './taskComponent.css';
 import { setTokenInAxios } from '../localStorage';
 import { filter } from '../filters';
 import axios from 'axios';
-import { FaSortAlphaDown, FaSortAlphaDownAlt } from 'react-icons/fa';
-import { BsCalendarDateFill, BsSortNumericDown, BsSortNumericDownAlt } from 'react-icons/bs';
+import { FaSortAlphaUp, FaSortAlphaUpAlt, FaSortNumericUp, FaSortNumericUpAlt } from 'react-icons/fa';
+import { BsCalendarDateFill  } from 'react-icons/bs';
 import FilterButton from './FilterButton';
 
 export default function TasksComponent() {
@@ -27,15 +27,15 @@ export default function TasksComponent() {
     setTasks(filtered);
   };
   
-  const handleClickDateUp = () => {
+  const handleClickNewDate = () => {
     const tasksCopy = [...tasks];
-    const filtered = filter.byDateUp(tasksCopy);
+    const filtered = filter.byNewDate(tasksCopy);
     setTasks(filtered);
   };
     
-  const handleClickDateDown = () => {
+  const handleClickOldDate = () => {
     const tasksCopy = [...tasks];
-    const filtered = filter.byDateDown(tasksCopy);
+    const filtered = filter.byOldDate(tasksCopy);
     setTasks(filtered);
   };
 
@@ -96,20 +96,20 @@ export default function TasksComponent() {
       </div>
       <div>
         <FilterButton
-          text={ <FaSortAlphaDown /> }
+          text={ <FaSortAlphaUp /> }
           handleClick={ handleClickAtoZ }
         />
         <FilterButton
-          text={ <FaSortAlphaDownAlt /> }
+          text={ <FaSortAlphaUpAlt /> }
           handleClick={ handleClickZtoA }
         />
         <FilterButton
-          text={ <><BsSortNumericDown /> <BsCalendarDateFill /></> }
-          handleClick={ handleClickDateUp }
+          text={ <><FaSortNumericUpAlt /> <BsCalendarDateFill /></> }
+          handleClick={ handleClickNewDate }
         />
         <FilterButton
-          text={ <><BsSortNumericDownAlt /> <BsCalendarDateFill /></> }
-          handleClick={ handleClickDateDown }
+          text={ <><FaSortNumericUp /> <BsCalendarDateFill /></> }
+          handleClick={ handleClickOldDate }
         />
       </div>
       {

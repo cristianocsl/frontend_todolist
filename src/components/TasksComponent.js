@@ -42,8 +42,8 @@ export default function TasksComponent() {
   const contentFilterButtons = [
     { text: <FaSortAlphaUp />, handleClick: handleClickAtoZ },
     { text: <FaSortAlphaUpAlt />, handleClick: handleClickZtoA },
-    { text: <><FaSortNumericUpAlt /> <BsCalendarDateFill /></>, handleClick: handleClickOldDate },
-    { text: <><FaSortNumericUp /> <BsCalendarDateFill /></>, handleClick: handleClickNewDate },
+    { text: <><FaSortNumericUp /> <BsCalendarDateFill /></>, handleClick: handleClickOldDate },
+    { text: <><FaSortNumericUpAlt /> <BsCalendarDateFill /></>, handleClick: handleClickNewDate },
   ];
   
   const handleClickStatus = () => {

@@ -62,7 +62,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
 
   const chooseVariant = () => !saveButton ? 'outlined' : 'filled';
 
-  const chooseLabel = () => !saveButton ? '' : 'Editando';
+  const chooseLabel = () => !saveButton ? '' : 'Editing';
 
   return (
     <div
@@ -70,7 +70,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
     className="container-task"
     >
     <div className="date">
-      Criado em { item.createdAt.split(' ')[0] }
+      Created at { item.createdAt.split(' ')[0] }
     </div>
 
     <div

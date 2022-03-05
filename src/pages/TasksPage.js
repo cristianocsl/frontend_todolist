@@ -1,13 +1,11 @@
 import React from 'react';
+import TasksHeader from './TasksHeader';
 import TasksComponent from '../components/TasksComponent';
-import axios from 'axios';
-
-import './taskPage.css';
 
 export default function TasksPage() {
   return (
     <div>
-      <h2>Olá, {axios.defaults.headers['userName']}!</h2>
+      <TasksHeader />
       <TasksComponent />
     </div>
   );

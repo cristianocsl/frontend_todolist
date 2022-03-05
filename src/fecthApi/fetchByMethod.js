@@ -3,6 +3,7 @@ import fetchGetTasks from './fetchGetTasks';
 import fetchUpdateTask from './fetchUpdateTask';
 import fetchUserLogin from './fetchUserLogin';
 import fetchUserRegister from './fetchUserRegister';
+import fetchRemoveTask from './fetchRemoveTask';
 
 
 const fetchByMethod = {
@@ -10,7 +11,8 @@ const fetchByMethod = {
     loginPost: fetchUserLogin,
     fetchAllTasks: fetchGetTasks,
     fetchCreateTask,
-    fetchUpdateTask
+    fetchUpdateTask,
+    fetchRemoveTask,
 };
 
 export default fetchByMethod;

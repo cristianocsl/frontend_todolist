@@ -20,7 +20,7 @@ export default function TasksPage() {
         </div>
         <h3>
           <Box sx={{ color: colors.blue[900] }}>
-            Olá, { getUserName() }!
+            Hello, { getUserName() }!
           </Box>
         </h3>
       </div>

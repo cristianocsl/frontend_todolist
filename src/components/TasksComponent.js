@@ -124,21 +124,22 @@ export default function TasksComponent() {
           sx={{ height: '31px' }}
           onClick={ () => setShowFilters((prevState) => !prevState) }
         >
-          Filtros
+          Filters
         </Button>
       </div>
-      <div
-        hidden={hideFilters}
-        className="filter-buttons"
-      >
-        {
-          contentFilterButtons.map(({ text, handleClick, heightValue}) => <FilterButton
+      <div hidden={hideFilters}>
+        <div
+          className="filter-buttons"
+          >
+          {
+            contentFilterButtons.map(({ text, handleClick, heightValue}) => <FilterButton
             key={ uuidv4() }
             text={ text }
-            handleClick={ handleClick }
-            heightValue={ heightValue }
-          />)
-        }
+              handleClick={ handleClick }
+              heightValue={ heightValue }
+            />)
+          }
+        </div>
       </div>
       {
         tasks.map((item) => (

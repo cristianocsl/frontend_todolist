@@ -3,7 +3,7 @@ import { URL_API } from './urlApi';
 
 const fetchUserRegister = async (userData) => {
   try {
-    const { data } = await axios.post(`${URL_API}/user`, userData);
+    const { data } = await axios.post(`${URL_API}/register`, userData);
     axios.defaults.headers.common['Authorization'] = data.token;
     axios.defaults.headers['userName'] = data.name;
 

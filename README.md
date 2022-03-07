@@ -26,10 +26,11 @@ Esta aplicação é parte integrante de uma aplicação fullstack desenvolvida a
 
 5. a aplicação estará disponível em `http://localhost:3000`
 
-6. para interromper a execução da aplicação, execute <code>ctrl + c</ctrl>
+6. para interromper a execução da aplicação, execute `ctrl + c`
 
 
 ## Tela de login
+
 
 A primeira tela da aplicação é de login. Nela, deve-se informar o email e senha criados no momento do cadastro.
 

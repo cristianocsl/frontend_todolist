@@ -50,6 +50,11 @@ A primeira tela da aplicação é de login. Nela, deve-se informar o email e sen
 |:-:|:-:|:-:|
 |<img src="https://user-images.githubusercontent.com/82241160/157132188-6351b3f9-e34d-4344-a6c7-4aa4ecea3c15.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157132228-3b2a702f-dd44-4024-aba3-94f496f1984d.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157132243-d8815675-4f50-42e1-aaf8-6ffc8ae6cca5.png" height="500px" />|
 
+
+|Mensagem de erro devido a senha incorreta|Mensagem de erro devido a usuário já cadastrado|
+|:-:|:-:|
+|<img src="https://user-images.githubusercontent.com/82241160/157132188-6351b3f9-e34d-4344-a6c7-4aa4ecea3c15.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157132228-3b2a702f-dd44-4024-aba3-94f496f1984d.png" height="500px" />|
+
 ## Ferramentas utilizadas
 
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript);

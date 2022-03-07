@@ -45,6 +45,7 @@ A primeira tela da aplicação é de login. Nela, deve-se informar o email e sen
 
 ## Tela de cadastro
 
+A tela de cadastro é composta dos campos name, email e password. Os campos não podem estar vazios. Caso estejam, será mostrada uma mensagem pedindo o preenchimento do campo (ver imagens). Também haverá mensagens de erro caso os campos name e password não tenham a quantidade mínima de caracteres exigidos, ou caso o email cadastrado já exista no banco de dados, ou ainda se o email passado para o campo não seja um email válido.
 
 |Cadastrado com sucesso|Erro: usuário já cadastrado|Erro: nome com menos de 3 caracteres|
 |:-:|:-:|:-:|

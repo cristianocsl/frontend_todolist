@@ -53,7 +53,7 @@ A primeira tela da aplicação é de login. Nela, deve-se informar o email e sen
 
 |Erro: senha incorreta|Erro: email com formato inválido|
 |:-:|:-:|
-|<img src="https://user-images.githubusercontent.com/82241160/157132188-6351b3f9-e34d-4344-a6c7-4aa4ecea3c15.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157135305-11ba9726-3633-4863-9140-879c7c031de6.png" height="500px" />|
+|<img src="https://user-images.githubusercontent.com/82241160/157135673-807d9d64-3544-4f58-a026-30b5ae1f53cc.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157135305-11ba9726-3633-4863-9140-879c7c031de6.png" height="500px" />|
 
 ## Ferramentas utilizadas
 

@@ -37,7 +37,7 @@ A primeira tela da aplicação é de login. Nela, deve-se informar o email e sen
 <div align="center">
   <img src="https://user-images.githubusercontent.com/82241160/157121087-323cede0-99df-41c0-9971-ac9e815463a0.png" height="500px" />
     <figcaption>Tela de login</figcaption>
-  <img src="https://user-images.githubusercontent.com/82241160/157124312-71569c36-562b-4031-9614-427e5a2b673e.png" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/157124937-4b22afef-6c9e-4f2d-92ed-ddcfc6a112ed.png" height="500px" />
     <figcaption>Tela 2</figcaption>
 </div>
 

@@ -34,7 +34,7 @@ Esta aplicação é parte integrante de uma aplicação fullstack desenvolvida a
 
 A primeira tela da aplicação é de login. Nela, deve-se informar o email e senha criados no momento do cadastro (ver imagens). Serão mostradas mensagens informativas em caso de email inexistente ou incorreto, de senha incorreta ou de campo não preenchido. Caso ainda não tenha feito o cadastro do usuário, é possível acessar a tela de cadastro no link `Sign Up`.
 
-<div align="center">
+<div display="flex">
   <p>Tela de login</p><p>Mensagem de erro com campo em branco</p><p>Mensagem de erro com senha incorreta</p>
 </div>
 <div align="center">

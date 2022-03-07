@@ -34,12 +34,10 @@ Esta aplicação é parte integrante de uma aplicação fullstack desenvolvida a
 
 A primeira tela da aplicação é de login. Nela, deve-se informar o email e senha criados no momento do cadastro (ver imagens). Caso
 
-<div align="center">
-  <figure>
-    <img src="https://user-images.githubusercontent.com/82241160/157121087-323cede0-99df-41c0-9971-ac9e815463a0.png" height="500px" alt="tessstando" />
+  <figure align="center">
+    <img src="https://user-images.githubusercontent.com/82241160/157121087-323cede0-99df-41c0-9971-ac9e815463a0.png" height="500px"/>
     <figcaption>Tela de login</figcaption>
   </figure>
-</div>
 
 ## Ferramentas utilizadas
 

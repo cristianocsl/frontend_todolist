@@ -32,10 +32,11 @@ Esta aplicação é parte integrante de uma aplicação fullstack desenvolvida a
 ## Tela de login
 
 
-A primeira tela da aplicação é de login. Nela, deve-se informar o email e senha criados no momento do cadastro.
+A primeira tela da aplicação é de login. Nela, deve-se informar o email e senha criados no momento do cadastro (ver imagens). Caso
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/82241160/157121087-323cede0-99df-41c0-9971-ac9e815463a0.png" height="600px" />
+<img src="https://user-images.githubusercontent.com/82241160/157121087-323cede0-99df-41c0-9971-ac9e815463a0.png" height="500px" />
+<em>Tela de login</em>
 </div>
 
 ## Ferramentas utilizadas

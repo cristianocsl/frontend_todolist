@@ -15,7 +15,7 @@ Esta aplicação é parte integrante de uma aplicação fullstack desenvolvida a
 ## Instruções para rodar o projeto localmente
 
 1. abra o terminal e clone o repositório do projeto frontend_todolist:
-<code>git clone git@github.com:cristianocsl/frontend_todolist.git</code>
+`git clone git@github.com:cristianocsl/frontend_todolist.git`
 
 2. entre no diretório frontend_todolist:
 <code>cd frontend_todolist</code>

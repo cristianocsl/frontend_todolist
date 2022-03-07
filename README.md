@@ -24,15 +24,19 @@ Esta aplicação é parte integrante de uma aplicação fullstack desenvolvida a
 
 4. para iniciar a aplicação, execute <code>npm start</code>
 
-5. a aplicação estará disponível em <code>http://localhost:3000</code>
+5. a aplicação estará disponível em `http://localhost:3000`
 
 6. para interromper a execução da aplicação, execute <code>ctrl + c</ctrl>
 
+## Tela de login
 
-testando aspas: `Cristiano`
+A primeira tela da aplicação é de login. Nela, deve-se informar o email e senha criados no momento do cadastro.
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/82241160/157121087-323cede0-99df-41c0-9971-ac9e815463a0.png" />
+</div>
 
 ## Ferramentas utilizadas
-
 
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript);
 - [MongoDB Atlas](https://www.mongodb.com/atlas/database): serviço de banco de dados de documentos em nuvem global para aplicações modernas;

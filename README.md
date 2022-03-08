@@ -38,9 +38,6 @@ A primeira tela da aplicação é de login. Nela, deve-se informar o email e sen
   <img src="https://user-images.githubusercontent.com/82241160/157141207-b4c79155-f5c1-4250-89f1-f8395bed27c0.png" height="500px" />
   <img src="https://user-images.githubusercontent.com/82241160/157141307-7ff8108c-1c9c-41bc-8feb-dab7bbb0365d.png" height="500px" />
   <img src="https://user-images.githubusercontent.com/82241160/157141385-17d37ffd-0c35-402c-aa23-11b5660c8d97.png" height="500px" />|
-</div>
-
-<div align="center">
   <img src="https://user-images.githubusercontent.com/82241160/157141549-4e67e90b-72fa-4867-b6b5-7a9d854c5e36.png" height="500px" />
   <img src="https://user-images.githubusercontent.com/82241160/157141600-ed22a5d1-4346-41de-bcf5-41582663917d.png" height="500px" />
 </div>
@@ -54,9 +51,6 @@ A tela de cadastro é composta dos campos name, email e password. Os campos não
   <img src="https://user-images.githubusercontent.com/82241160/157142167-eaf8d3b0-8067-4292-acf0-3ccef3c84d5f.png" height="500px" />
   <img src="https://user-images.githubusercontent.com/82241160/157142169-e1ed46f3-4a19-461e-b0c7-beb6a58a699c.png" height="500px" />
   <img src="https://user-images.githubusercontent.com/82241160/157142171-137692da-f635-47ee-9cb6-ddb85665389d.png" height="500px" />|
-</div>
-
-<div align="center">
   <img src="https://user-images.githubusercontent.com/82241160/157142172-c3c65a30-a94c-405e-bb7d-b2b81dd38d5e.png" height="500px" />
   <img src="https://user-images.githubusercontent.com/82241160/157142174-c1e42c4c-72ca-428b-b6bd-2a6014262f09.png" height="500px" />
 </div>

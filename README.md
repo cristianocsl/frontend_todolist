@@ -40,13 +40,10 @@ A primeira tela da aplicação é de login. Nela, deve-se informar o email e sen
   <img src="https://user-images.githubusercontent.com/82241160/157141385-17d37ffd-0c35-402c-aa23-11b5660c8d97.png" height="500px" />|
 </div>
 
-|Tela de login|Mensagem de erro com campo em branco|Mensagem de erro com senha incorreta|
-|:-:|:-:|:-:|
-|<img src="https://user-images.githubusercontent.com/82241160/157121087-323cede0-99df-41c0-9971-ac9e815463a0.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157124937-4b22afef-6c9e-4f2d-92ed-ddcfc6a112ed.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157125799-6536d03d-2433-4a46-81a5-0199b0e15489.png" height="500px" />|
-
-|Mensagem de erro por usuário não existe ou email incorreto|Login efetuado com sucesso|
-|:-:|:-:|
-|<img src="https://user-images.githubusercontent.com/82241160/157126761-133e6bc8-6c55-4f59-a176-6af97c14b0b1.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157129896-46202734-83fb-4170-9cdc-9dcf4a00b67a.png" height="500px" />|
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/82241160/157141549-4e67e90b-72fa-4867-b6b5-7a9d854c5e36.png" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/157141600-ed22a5d1-4346-41de-bcf5-41582663917d.png" height="500px" />
+</div>
 
 
 ## Tela de cadastro

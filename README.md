@@ -60,7 +60,7 @@ A tela de cadastro é composta dos campos name, email e password. Os campos não
 
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript);
 - [MongoDB Atlas](https://www.mongodb.com/atlas/database): serviço de banco de dados de documentos em nuvem global para aplicações modernas;
-- [React];
+- [React]();
 - [Heroku](https://id.heroku.com/): plataforma de hospedagem, configuração, testagem e publicação de projetos virtuais na nuvem. 
 
 ## Bibliotecas

@@ -50,14 +50,16 @@ A primeira tela da aplicação é de login. Nela, deve-se informar o email e sen
 
 A tela de cadastro é composta dos campos name, email e password. Os campos não podem estar vazios. Caso estejam, será mostrada uma mensagem pedindo o preenchimento do campo (ver imagens). Também haverá mensagens de erro caso os campos name e password não tenham a quantidade mínima de caracteres exigidos, ou caso o email cadastrado já exista no banco de dados, ou ainda se o email passado para o campo não seja um email válido.
 
-|Cadastrado com sucesso|Erro: usuário já cadastrado|Erro: nome com menos de 3 caracteres|
-|:-:|:-:|:-:|
-|<img src="https://user-images.githubusercontent.com/82241160/157132188-6351b3f9-e34d-4344-a6c7-4aa4ecea3c15.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157132243-d8815675-4f50-42e1-aaf8-6ffc8ae6cca5.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157134691-c3bcdf92-0fa6-4380-ace4-918eed6a24d6.png" height="500px" />|
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/82241160/157142167-eaf8d3b0-8067-4292-acf0-3ccef3c84d5f.png" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/157142169-e1ed46f3-4a19-461e-b0c7-beb6a58a699c.png" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/157142171-137692da-f635-47ee-9cb6-ddb85665389d.png" height="500px" />|
+</div>
 
-
-|Erro: senha com menos de 6 caracteres|Erro: email com formato inválido|
-|:-:|:-:|
-|<img src="https://user-images.githubusercontent.com/82241160/157135673-807d9d64-3544-4f58-a026-30b5ae1f53cc.png" height="500px" />|<img src="https://user-images.githubusercontent.com/82241160/157135305-11ba9726-3633-4863-9140-879c7c031de6.png" height="500px" />|
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/82241160/157142172-c3c65a30-a94c-405e-bb7d-b2b81dd38d5e.png" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/157142174-c1e42c4c-72ca-428b-b6bd-2a6014262f09.png" height="500px" />
+</div>
 
 ## Ferramentas utilizadas
 

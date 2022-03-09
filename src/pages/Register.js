@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import { Alert, Button, Stack, Box, LinearProgress } from '@mui/material';
@@ -26,6 +26,8 @@ export default function Register() {
     });
   };
 
+  console.log('loading', loading);
+
   const handleSubmit = async(event) => {
     event.preventDefault();
     const response = await fetchByMethod.postRegister(fields);
@@ -34,11 +36,13 @@ export default function Register() {
       ? setErrorMessage(response)
       : setSuccessMessage(response.message)
       & setTimeout(() => navigate('/login'), 4500);
-    
-    !errorMessage
-      ? setLoading((prevState) => prevState)
-      : setLoading((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    successMessage
+      ? setLoading((prevState) => !prevState)
+      : setLoading((prevState) => prevState);
+  }, [successMessage]);
 
   return (
     <form

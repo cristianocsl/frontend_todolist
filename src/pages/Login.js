@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import './register.css';
@@ -33,9 +33,13 @@ export default function login() {
       ? setErrorMessage(response)
       : setSuccessMessage(response.message)
       & setTimeout(() => navigate('/tasks'), 3000);
-    
-    setLoading((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    successMessage
+      ? setLoading((prevState) => !prevState)
+      : setLoading((prevState) => prevState);
+  }, [successMessage]);
 
   return (
     <form

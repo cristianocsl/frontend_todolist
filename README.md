@@ -65,8 +65,6 @@ A tela de cadastro é composta dos campos name, email e password. Os campos não
 ## Bibliotecas
 
 - [eslint](https://www.npmjs.com/package/eslint): padrão de estilização de código;
-- [http-status-codes](https://www.npmjs.com/package/http-status-codes): facilitar legibilidade dos códigos http;
-- [joi](https://www.npmjs.com/package/joi): validação de requisições;
 
 ## Contatos
 

@@ -69,7 +69,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
     key={item._id + 1}
     className="container-task"
     >
-    <div className="date">
+    <div className="text-task">
       Created at { item.createdAt.split(' ')[0] }
     </div>
 
@@ -82,7 +82,6 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
         label={ chooseLabel() }
         variant={ chooseVariant() }
         sx={{ width: '100%' }}
-        className="content-field"
         required
         id="outlined-text-input"
         type="text"
@@ -107,6 +106,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
             value={item.status}
             defaultValue={item.status}
             name="select"
+            className="icon-button"
             onChange={handleChangeSelect}
           >
             {
@@ -121,6 +121,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
         <IconButton
           onClick={ handleDelete }
           className="icon-button"
+          sx={{ color: '#00317a' }}
         >
           <DeleteIcon />
         </IconButton>

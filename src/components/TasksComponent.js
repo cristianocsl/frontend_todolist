@@ -112,7 +112,7 @@ export default function TasksComponent() {
           onChange={ (e) => setTextField({...textField, task: e.target.value}) }
           />
         <IconButton type="submit">
-          <AddIcon />
+          <AddIcon sx={{ color: '#0d47a1' }} />
         </IconButton>
       </form>
       <div>

@@ -8,7 +8,8 @@
 }
 
 .container-task {
-  border: rgb(190, 190, 190) 1px solid;
+  background-color: #bddde7;
+  border: none;
   border-radius: 5px !important;
   display: flex;
   flex-direction: column;
@@ -16,7 +17,25 @@
   margin: 10px 5px 10px 5px;
 }
 
-.date {
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input.Mui-disabled {
+  border: none;
+  background-color: #bddde7 !important;
+  font-size: x-large;
+  opacity: 1;
+  -webkit-text-fill-color: #00317a  !important;
+  text-align: center;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.icon-button {
+  color: #00317a !important;
+}
+
+.text-task {
+  color: #00317a;
   display: flex;
   justify-content: center;
   min-height:25px;

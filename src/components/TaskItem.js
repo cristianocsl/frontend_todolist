@@ -81,7 +81,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
         onKeyPress={ (event) => event.key === 'Enter' && handleSave(event) }
         label={ chooseLabel() }
         variant={ chooseVariant() }
-        sx={{ width: '100%' }}
+        sx={{ width: '100%', borderColor: 'rgba(0, 0, 0, 0)' }}
         required
         id="outlined-text-input"
         type="text"

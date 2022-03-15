@@ -37,6 +37,10 @@ export default function Register() {
   };
 
   useEffect(() => {
+    fetchByMethod.fetchWakeup();
+  }, []);
+
+  useEffect(() => {
     successMessage
       ? setLoading((prevState) => !prevState)
       : setLoading((prevState) => prevState);

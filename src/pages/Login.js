@@ -36,6 +36,10 @@ export default function login() {
   };
 
   useEffect(() => {
+    fetchByMethod.fetchWakeup();
+  }, []);
+
+  useEffect(() => {
     successMessage
       ? setLoading((prevState) => !prevState)
       : setLoading((prevState) => prevState);

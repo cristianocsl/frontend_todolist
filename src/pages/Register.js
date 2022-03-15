@@ -26,8 +26,6 @@ export default function Register() {
     });
   };
 
-  console.log('loading', loading);
-
   const handleSubmit = async(event) => {
     event.preventDefault();
     const response = await fetchByMethod.postRegister(fields);
@@ -37,6 +35,10 @@ export default function Register() {
       : setSuccessMessage(response.message)
       & setTimeout(() => navigate('/login'), 4500);
   };
+
+  useEffect(() => {
+    fetchByMethod.fetchWakeup();
+  }, []);
 
   useEffect(() => {
     successMessage

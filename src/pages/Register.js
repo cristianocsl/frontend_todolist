@@ -26,8 +26,6 @@ export default function Register() {
     });
   };
 
-  console.log('loading', loading);
-
   const handleSubmit = async(event) => {
     event.preventDefault();
     const response = await fetchByMethod.postRegister(fields);

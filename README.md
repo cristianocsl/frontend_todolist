@@ -9,7 +9,7 @@ Através da tela de tarefas, é possível criar, visualizar e remover tarefas. T
 Esta aplicação é parte integrante de uma aplicação fullstack desenvolvida a partir da Stack <strong>MERN</strong> (MongoDB Express React NodeJS), utiliza arquitetura em camadas (MSC - Model Service Controllers).
 
 ------------
-### Veja a aplicação no ar por este link: https://frontend-todolist-cris.herokuapp.com/
+### Veja a aplicação no ar por este link: https://frontend-todolist.vercel.app/
 ------------
 
 ## Instruções para rodar o projeto localmente
@@ -59,8 +59,8 @@ A tela de cadastro é composta dos campos name, email e password. Os campos não
 
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript);
 - [MongoDB Atlas](https://www.mongodb.com/atlas/database): serviço de banco de dados de documentos em nuvem global para aplicações modernas;
-- [React]();
-- [Heroku](https://id.heroku.com/): plataforma de hospedagem, configuração, testagem e publicação de projetos virtuais na nuvem. 
+- [React](https://pt-br.reactjs.org/): Uma biblioteca JavaScript para criar interfaces de usuário;
+- [Vercel](https://vercel.com/): plataforma primariamente voltada para sites estáticos e frameworks front-end. 
 
 ## Bibliotecas
 

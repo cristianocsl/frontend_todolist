@@ -26,7 +26,7 @@
   text-align: center !important;
 }
 
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {
+.MuiOutlinedInput-notchedOutline {
   border-color: rgba(0, 0, 0, 0) !important;
 }
 

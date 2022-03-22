@@ -8,8 +8,8 @@
 }
 
 .container-task {
-  background-color: #bddde7;
-  border: none;
+  background-color: #bddde7 !important;
+  border: none !important;
   border-radius: 5px !important;
   display: flex;
   flex-direction: column;
@@ -18,12 +18,12 @@
 }
 
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input.Mui-disabled {
-  border: none;
+  border: none !important;
   background-color: #bddde7 !important;
-  font-size: x-large;
-  opacity: 1;
+  font-size: x-large !important;
+  opacity: 1 !important;
   -webkit-text-fill-color: #00317a  !important;
-  text-align: center;
+  text-align: center !important;
 }
 
 .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {

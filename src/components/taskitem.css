@@ -17,7 +17,7 @@
   margin: 10px 5px 10px 5px;
 }
 
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input.Mui-disabled {
+.Mui-disabled {
   border: none !important;
   background-color: #bddde7 !important;
   font-size: x-large !important;
@@ -26,7 +26,7 @@
   text-align: center !important;
 }
 
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {
+.Mui-disabled .MuiOutlinedInput-notchedOutline {
   border-color: rgba(0, 0, 0, 0) !important;
 }
 

@@ -7,7 +7,8 @@ import './taskComponent.css';
 import { setTokenInAxios } from '../localStorage';
 import { filter, showOnly } from '../filters';
 import axios from 'axios';
-import { FaSortAlphaUp, FaSortAlphaUpAlt, FaSortNumericUp, FaSortNumericUpAlt } from 'react-icons/fa';
+import { FaSortAlphaUp, FaSortAlphaUpAlt } from 'react-icons/fa';
+import { HiArrowNarrowUp } from 'react-icons/hi';
 import { BsCalendarDateFill  } from 'react-icons/bs';
 import { v4 as uuidv4 } from 'uuid';
 import FilterButton from './FilterButton';
@@ -16,6 +17,8 @@ const PENDING = 'Pending';
 const TODO = 'To do';
 const DONE = 'Done';
 const ORIGINAL = 'Original';
+const OLD = ' Old';
+const NEW = ' New';
 
 export default function TasksComponent() {
   const [tasks, setTasks] = useState([]);
@@ -65,8 +68,8 @@ export default function TasksComponent() {
   const contentFilterButtons = [
     { text: <FaSortAlphaUp />, handleClick: handleClickAtoZ },
     { text: <FaSortAlphaUpAlt />, handleClick: handleClickZtoA },
-    { text: <><FaSortNumericUp /> <BsCalendarDateFill /></>, handleClick: handleClickOldDate },
-    { text: <><FaSortNumericUpAlt /> <BsCalendarDateFill /></>, handleClick: handleClickNewDate },
+    { text: <><HiArrowNarrowUp /><BsCalendarDateFill /> { OLD }</>, handleClick: handleClickOldDate },
+    { text: <><HiArrowNarrowUp /><BsCalendarDateFill /> { NEW }</>, handleClick: handleClickNewDate },
     { text: PENDING, handleClick: () => showOnly.pendingTrue(functions), heightValue: '31px' },
     { text: TODO, handleClick: () => showOnly.todoTrue(functions), heightValue: '31px' },
     { text: DONE, handleClick: () => showOnly.doneTrue(functions), heightValue: '31px' },
@@ -119,7 +122,6 @@ export default function TasksComponent() {
 
   useEffect(async () => {
     separateStatus();
-    return () => separateStatus();
   }, [tasks]);
     
   useEffect(async () => {

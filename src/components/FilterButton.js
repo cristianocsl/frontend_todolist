@@ -9,7 +9,7 @@ const FilterButton = ({ text, handleClick, heightValue }) =>{
       variant="contained"
       size="large"
       type="button"
-      sx={{ height: heightValue }}
+      sx={{ height: heightValue, textTransform: 'capitalize', fontWeight: 600 }}
       onClick={ handleClick }
       >
         { text }

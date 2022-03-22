@@ -5,7 +5,7 @@ import AddIcon from '@mui/icons-material/Add';
 import TaskItem from './TaskItem';
 import './taskComponent.css';
 import { setTokenInAxios } from '../localStorage';
-import { filter } from '../filters';
+import { filter, showOnly } from '../filters';
 import axios from 'axios';
 import { FaSortAlphaUp, FaSortAlphaUpAlt, FaSortNumericUp, FaSortNumericUpAlt } from 'react-icons/fa';
 import { BsCalendarDateFill  } from 'react-icons/bs';
@@ -19,67 +19,73 @@ const ORIGINAL = 'Original';
 
 export default function TasksComponent() {
   const [tasks, setTasks] = useState([]);
-  const [copyTasks, setCopyTasks] = useState([]);
+  const [pending, setPending] = useState([]);
+  const [todo, setTodo] = useState([]);
+  const [done, setDone] = useState([]);
+  const [renderPending, setRenderPending] = useState(false);
+  const [renderTodo, setRenderTodo] = useState(false);
+  const [renderDone, setRenderDone] = useState(false);
   const [hideFilters, setShowFilters] = useState(true);
   const [textField, setTextField] = useState({ task: '' });
 
   const handleClickAtoZ = () => {
-    const tasksCopy = [...tasks];
-    const filtered = filter.AtoZ(tasksCopy);
+    const filtered = filter.AtoZ([...tasks]);
     setTasks(filtered);
   };
 
   const handleClickZtoA = () => {
-    const tasksCopy = [...tasks];
-    const filtered = filter.ZtoA(tasksCopy);
+    const filtered = filter.ZtoA([...tasks]);
     setTasks(filtered);
   };
   
   const handleClickNewDate = () => {
-    const tasksCopy = [...tasks];
-    const filtered = filter.byNewDate(tasksCopy);
+    const filtered = filter.byNewDate([...tasks]);
     setTasks(filtered);
   };
   
   const handleClickOldDate = () => {
-    const tasksCopy = [...tasks];
-    const filtered = filter.byOldDate(tasksCopy);
+    const filtered = filter.byOldDate([...tasks]);
     setTasks(filtered);
   };
 
-  const handleClickStatus = (statusRef) => {
-    const tasksCopy = [...copyTasks];
-    const filtered = tasksCopy.filter(({ status }) => status === statusRef);
-    setTasks(filtered);
+  const separateStatus = () => {
+    setPending(filter.byStatus(tasks, PENDING));
+    setDone(filter.byStatus(tasks, DONE));
+    setTodo(filter.byStatus(tasks, TODO));
   };
+
+  const setAllFalse = () => {
+    setRenderPending(false);
+    setRenderTodo(false);
+    setRenderDone(false);
+  };
+
+  const functions = { setRenderPending, setRenderTodo, setRenderDone };
 
   const contentFilterButtons = [
     { text: <FaSortAlphaUp />, handleClick: handleClickAtoZ },
     { text: <FaSortAlphaUpAlt />, handleClick: handleClickZtoA },
     { text: <><FaSortNumericUp /> <BsCalendarDateFill /></>, handleClick: handleClickOldDate },
     { text: <><FaSortNumericUpAlt /> <BsCalendarDateFill /></>, handleClick: handleClickNewDate },
-    { text: PENDING, handleClick: () => handleClickStatus(PENDING), heightValue: '31px' },
-    { text: TODO, handleClick: () => handleClickStatus(TODO), heightValue: '31px' },
-    { text: DONE, handleClick: () => handleClickStatus(DONE), heightValue: '31px' },
-    { text: ORIGINAL, handleClick: () => setTasks(copyTasks), heightValue: '31px' },
+    { text: PENDING, handleClick: () => showOnly.pendingTrue(functions), heightValue: '31px' },
+    { text: TODO, handleClick: () => showOnly.todoTrue(functions), heightValue: '31px' },
+    { text: DONE, handleClick: () => showOnly.doneTrue(functions), heightValue: '31px' },
+    { text: ORIGINAL, handleClick: async () => { fetchOriginalData(); setAllFalse(); }, heightValue: '31px' },
   ];
 
   const handleAddTask =  async (event) => {
     event.preventDefault();
-
     const data = await fetchByMethod.fetchCreateTask(textField);
-
     setTasks([...tasks, data]);
     setTextField({...textField, task: ''});
   };
   
-  useEffect(async () => {
+  const fetchOriginalData = async () => {
     await setTokenInAxios(axios);
     const data = await fetchByMethod.fetchAllTasks();
     setTasks(data);
-    setCopyTasks(data);
-  }, []);
-
+  };
+  
   const handleChange = (taskObj) => {
     const found = tasks.map((item) => {
       if (item._id === taskObj._id) return {
@@ -94,6 +100,31 @@ export default function TasksComponent() {
     const notDeleted = tasks.filter(({ _id }) => _id !== taskId._id);
     setTasks(notDeleted);
   };
+  
+  const mapTasks = (tasks) => tasks.map((item) => (
+    <TaskItem
+    item={item}
+    key={item._id}
+    sendChangesToFather={ handleChange }
+    handleDeleteOnFather={ handleDeleteOnFather }
+    />
+  ));
+    
+  const renderTasks = () => {
+    if (tasks && !renderPending && !renderTodo && !renderDone) return mapTasks(tasks);
+    if (renderPending) return mapTasks(pending);
+    if (renderTodo) return mapTasks(todo);
+    if (renderDone) return mapTasks(done);
+  };
+
+  useEffect(async () => {
+    separateStatus();
+    return () => separateStatus();
+  }, [tasks]);
+    
+  useEffect(async () => {
+    await fetchOriginalData();
+  }, []);
 
   return (
     <div className="container">
@@ -142,14 +173,7 @@ export default function TasksComponent() {
         </div>
       </div>
       {
-        tasks.map((item) => (
-          <TaskItem
-            item={item}
-            key={item._id}
-            sendChangesToFather={ handleChange }
-            handleDeleteOnFather={ handleDeleteOnFather }
-          />
-        ))
+        renderTasks()
       }
     </div>
   );

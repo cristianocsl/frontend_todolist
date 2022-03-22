@@ -14,12 +14,36 @@ export const filterByOldDate = (items) => items.sort((a, b) => {
     return (a.createdAt > b.createdAt) ? 1 : ((b.createdAt > a.createdAt) ? -1 : 0);
   });
 
-export const showByStatus = () => {};
+export const filterByStatus = (tasksList, statusRef) => tasksList.filter(({ status }) => status === statusRef);
 
 export const filter = {
   AtoZ: filterAtoZ,
   ZtoA: filterZtoA,
   byNewDate: filterByNewDate,
   byOldDate: filterByOldDate,
-  byStatus: showByStatus
+  byStatus: filterByStatus,
+};
+
+const pendingTrue = ({ setRenderPending, setRenderTodo, setRenderDone }) => {
+  setRenderPending(true);
+  setRenderTodo(false);
+  setRenderDone(false);
+};
+
+const todoTrue = ({ setRenderPending, setRenderTodo, setRenderDone }) => {
+  setRenderPending(false);
+  setRenderTodo(true);
+  setRenderDone(false);
+};
+
+const doneTrue = ({ setRenderPending, setRenderTodo, setRenderDone }) => {
+  setRenderPending(false);
+  setRenderTodo(false);
+  setRenderDone(true);
+};
+
+export const showOnly = {
+  pendingTrue,
+  todoTrue,
+  doneTrue,
 };

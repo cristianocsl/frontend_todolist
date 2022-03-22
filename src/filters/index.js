@@ -16,7 +16,6 @@ export const filterByOldDate = (items) => items.sort((a, b) => {
 
 export const filterByStatus = (tasksList, statusRef) => tasksList.filter(({ status }) => status === statusRef);
 
-
 export const filter = {
   AtoZ: filterAtoZ,
   ZtoA: filterZtoA,

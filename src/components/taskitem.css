@@ -4,11 +4,13 @@
 }
 
 .buttons-container {
+  align-items: center;
   display: flex;
+  color: #12094c;
 }
 
 .container-task {
-  background-color: #bddde7 !important;
+  background-color: #c9b8ed !important;
   border: none !important;
   border-radius: 5px !important;
   display: flex;
@@ -19,10 +21,10 @@
 
 .Mui-disabled {
   border: none !important;
-  background-color: #bddde7 !important;
+  background-color: #c9b8ed !important;
   font-size: x-large !important;
   opacity: 1 !important;
-  -webkit-text-fill-color: #00317a  !important;
+  -webkit-text-fill-color: #12094c  !important;
   text-align: center !important;
 }
 
@@ -31,14 +33,7 @@
 }
 
 .icon-button {
-  color: #00317a !important;
-}
-
-.text-task {
-  color: #00317a;
-  display: flex;
-  justify-content: center;
-  min-height:25px;
+  color: #12094c !important;
 }
 
 .select-edit-remove {

@@ -5,7 +5,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { shape, string, func } from 'prop-types';
-import fetchByMethod from '../fecthApi';
+import fetchByMethod from '../fecthApi/index';
 
 import './taskitem.css';
 
@@ -49,7 +49,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
     <IconButton
       onClick={ handleSave }
       className="icon-button"
-      >
+    >
       <SaveIcon />
     </IconButton>
   );
@@ -64,18 +64,16 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
 
   const chooseLabel = () => !saveButton ? '' : 'Editing';
 
+  const date = item.createdAt.split(' ')[0].split('/');
+
   return (
     <div
-    key={item._id + 1}
-    className="container-task"
+      key={item._id + 1}
+      className="container-task"
     >
-    <div className="text-task">
-      Created at { item.createdAt.split(' ')[0] }
-    </div>
+    <div className="buttons-container">
+      { `${date[0]}/${date[1]}` }
 
-    <div
-      className="buttons-container"
-      >
       <TextField
         key={item._id}
         onKeyPress={ (event) => event.key === 'Enter' && handleSave(event) }
@@ -96,8 +94,8 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
     <div className="select-edit-remove">
       <Box className="select">
         <FormControl
-        fullWidth
-        variant="standard"
+          fullWidth
+          variant="standard"
         >
           <InputLabel id="demo-simple-select-label">Status</InputLabel>
           <Select
@@ -121,7 +119,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
         <IconButton
           onClick={ handleDelete }
           className="icon-button"
-          sx={{ color: '#00317a' }}
+          sx={{ color: '#12094c' }}
         >
           <DeleteIcon />
         </IconButton>

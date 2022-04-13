@@ -5,12 +5,12 @@ import { string, func, shape, oneOfType } from 'prop-types';
 
 const FilterButton = ({ text, handleClick, heightValue }) =>{
   return <Button
-      className="content-field"
-      variant="contained"
-      size="large"
-      type="button"
-      sx={{ height: heightValue, textTransform: 'capitalize', fontWeight: 600 }}
-      onClick={ handleClick }
+        className="content-field"
+        variant="contained"
+        size="large"
+        type="button"
+        sx={{ height: heightValue, textTransform: 'capitalize', fontWeight: 600, backgroundColor: '#15449a' }}
+        onClick={ handleClick }
       >
         { text }
     </Button>;

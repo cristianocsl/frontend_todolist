@@ -49,7 +49,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
     <IconButton
       onClick={ handleSave }
       className="icon-button"
-      >
+    >
       <SaveIcon />
     </IconButton>
   );
@@ -66,16 +66,14 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
 
   return (
     <div
-    key={item._id + 1}
-    className="container-task"
+      key={item._id + 1}
+      className="container-task"
     >
     <div className="text-task">
       Created at { item.createdAt.split(' ')[0] }
     </div>
 
-    <div
-      className="buttons-container"
-      >
+    <div className="buttons-container">
       <TextField
         key={item._id}
         onKeyPress={ (event) => event.key === 'Enter' && handleSave(event) }
@@ -96,8 +94,8 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
     <div className="select-edit-remove">
       <Box className="select">
         <FormControl
-        fullWidth
-        variant="standard"
+          fullWidth
+          variant="standard"
         >
           <InputLabel id="demo-simple-select-label">Status</InputLabel>
           <Select

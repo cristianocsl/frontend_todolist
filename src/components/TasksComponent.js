@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import fetchByMethod from '../fecthApi';
+import fetchByMethod from '../fecthApi/index';
 import { TextField, IconButton, Button } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import TaskItem from './TaskItem';
@@ -19,6 +19,7 @@ const DONE = 'Done';
 const ORIGINAL = 'Original';
 const OLD = ' Old';
 const NEW = ' New';
+const HEIGHT = '31px';
 
 export default function TasksComponent() {
   const [tasks, setTasks] = useState([]);
@@ -68,12 +69,12 @@ export default function TasksComponent() {
   const contentFilterButtons = [
     { text: <FaSortAlphaUp />, handleClick: handleClickAtoZ },
     { text: <FaSortAlphaUpAlt />, handleClick: handleClickZtoA },
-    { text: <><HiArrowNarrowUp /><BsCalendarDateFill /> { OLD }</>, handleClick: handleClickOldDate },
-    { text: <><HiArrowNarrowUp /><BsCalendarDateFill /> { NEW }</>, handleClick: handleClickNewDate },
-    { text: PENDING, handleClick: () => showOnly.pendingTrue(functions), heightValue: '31px' },
-    { text: TODO, handleClick: () => showOnly.todoTrue(functions), heightValue: '31px' },
-    { text: DONE, handleClick: () => showOnly.doneTrue(functions), heightValue: '31px' },
-    { text: ORIGINAL, handleClick: async () => { fetchOriginalData(); setAllFalse(); }, heightValue: '31px' },
+    { text: <><HiArrowNarrowUp /><BsCalendarDateFill /> { OLD }</>, handleClick: handleClickOldDate, heightValue: HEIGHT },
+    { text: <><HiArrowNarrowUp /><BsCalendarDateFill /> { NEW }</>, handleClick: handleClickNewDate, heightValue: HEIGHT },
+    { text: PENDING, handleClick: () => showOnly.pendingTrue(functions), heightValue: HEIGHT },
+    { text: TODO, handleClick: () => showOnly.todoTrue(functions), heightValue: HEIGHT },
+    { text: DONE, handleClick: () => showOnly.doneTrue(functions), heightValue: HEIGHT },
+    { text: ORIGINAL, handleClick: async () => { fetchOriginalData(); setAllFalse(); }, heightValue: HEIGHT },
   ];
 
   const handleAddTask =  async (event) => {

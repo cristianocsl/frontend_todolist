@@ -69,7 +69,7 @@ A tela de cadastro é composta dos campos name, email e password. Os campos não
 ## Contatos
 
 - Email: cslcristiano@gmail.com
-- LinkedIn: https://www.linkedin.com/in/cristianoseabralima/
+- LinkedIn: https://www.linkedin.com/in/cristianolimacsl/
 - Github: https://github.com/cristianocsl
 
 

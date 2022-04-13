@@ -156,7 +156,7 @@ export default function TasksComponent() {
           variant="outlined"
           size="large"
           type="button"
-          sx={{ height: HEIGHT, color: 'whitesmoke', borderColor: 'whitesmoke' }}
+          sx={{ height: HEIGHT, color: 'whitesmoke', borderColor: 'whitesmoke', backgroundColor: '#15449a' }}
           onClick={ () => setShowFilters((prevState) => !prevState) }
         >
           Filters

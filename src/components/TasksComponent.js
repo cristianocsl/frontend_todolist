@@ -12,6 +12,7 @@ import { HiArrowNarrowUp } from 'react-icons/hi';
 import { BsCalendarDateFill  } from 'react-icons/bs';
 import { v4 as uuidv4 } from 'uuid';
 import FilterButton from './FilterButton';
+import { colors } from '@mui/material/';
 
 const PENDING = 'Pending';
 const TODO = 'To do';
@@ -146,7 +147,7 @@ export default function TasksComponent() {
           onChange={ (e) => setTextField({...textField, task: e.target.value}) }
           />
         <IconButton type="submit">
-          <AddIcon sx={{ color: '#0d47a1' }} />
+          <AddIcon sx={{ color: colors.blue[100] }} />
         </IconButton>
       </form>
       <div>
@@ -155,7 +156,7 @@ export default function TasksComponent() {
           variant="outlined"
           size="large"
           type="button"
-          sx={{ height: HEIGHT, color: 'white' }}
+          sx={{ height: HEIGHT, color: 'whitesmoke', borderColor: 'whitesmoke' }}
           onClick={ () => setShowFilters((prevState) => !prevState) }
         >
           Filters

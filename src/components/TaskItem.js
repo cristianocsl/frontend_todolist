@@ -64,16 +64,16 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
 
   const chooseLabel = () => !saveButton ? '' : 'Editing';
 
+  const date = item.createdAt.split(' ')[0].split('/');
+
   return (
     <div
       key={item._id + 1}
       className="container-task"
     >
-    <div className="text-task">
-      Created at { item.createdAt.split(' ')[0] }
-    </div>
-
     <div className="buttons-container">
+      { `${date[0]}/${date[1]}` }
+
       <TextField
         key={item._id}
         onKeyPress={ (event) => event.key === 'Enter' && handleSave(event) }
@@ -119,7 +119,7 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
         <IconButton
           onClick={ handleDelete }
           className="icon-button"
-          sx={{ color: '#00317a' }}
+          sx={{ color: '#12094c' }}
         >
           <DeleteIcon />
         </IconButton>

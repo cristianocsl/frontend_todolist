@@ -5,7 +5,7 @@ import { Alert, Button, Stack, Box, LinearProgress } from '@mui/material';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import { colors } from '@mui/material/';
 import fetchByMethod from '../fecthApi';
-import { inputLabelProps, inputProps } from '../makeStyles';
+import { inputLabelProps, inputProps, width } from '../makeStyles';
 import './register.css';
 
 export default function Register() {
@@ -61,7 +61,7 @@ export default function Register() {
         </div>
         <TextField
           className="content-field"
-          sx={{ width: '100%' }}
+          sx={ width }
           required
           id="outlined-required"
           label="name"
@@ -71,7 +71,7 @@ export default function Register() {
           onChange={ handleChange }
         />
         <TextField
-          sx={{ width: '100%' }}
+          sx={ width }
           className="content-field"
           required
           id="outlined-email-input"
@@ -83,7 +83,7 @@ export default function Register() {
           onChange={ handleChange }
         />
         <TextField
-          sx={{ width: '100%' }}
+          sx={ width }
           className="content-field"
           required
           id="outlined-password-input"
@@ -107,7 +107,7 @@ export default function Register() {
         >
           <Stack
             className="content-field"
-            sx={{ width: '100%' }}
+            sx={ width }
             spacing={2}
             >
             <Alert
@@ -122,7 +122,7 @@ export default function Register() {
         >
           <Stack
             className="content-field"
-            sx={{ width: '100%' }}
+            sx={ width }
             spacing={2}
             >
             <Alert

@@ -5,6 +5,7 @@ import { Alert, Button, Stack, Box, LinearProgress } from '@mui/material';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import { colors } from '@mui/material/';
 import fetchByMethod from '../fecthApi';
+import { inputLabelProps, inputProps, width } from '../makeStyles';
 import './register.css';
 
 export default function Register() {
@@ -60,31 +61,37 @@ export default function Register() {
         </div>
         <TextField
           className="content-field"
-          sx={{ width: '100%' }}
+          sx={ width }
           required
           id="outlined-required"
           label="name"
           name="name"
+          InputProps={ inputProps }
+          InputLabelProps={ inputLabelProps }
           onChange={ handleChange }
         />
         <TextField
-          sx={{ width: '100%' }}
+          sx={ width }
           className="content-field"
           required
           id="outlined-email-input"
           label="email"
           type="email"
           name="email"
+          InputProps={ inputProps }
+          InputLabelProps={ inputLabelProps }
           onChange={ handleChange }
         />
         <TextField
-          sx={{ width: '100%' }}
+          sx={ width }
           className="content-field"
           required
           id="outlined-password-input"
           label="Password"
           type="password"
           name="password"
+          InputProps={ inputProps }
+          InputLabelProps={ inputLabelProps }
           onChange={ handleChange }
         />
         <Button
@@ -96,11 +103,11 @@ export default function Register() {
           Register
         </Button>
         <span
-        hidden={ !errorMessage || successMessage }
+          hidden={ !errorMessage || successMessage }
         >
           <Stack
             className="content-field"
-            sx={{ width: '100%' }}
+            sx={ width }
             spacing={2}
             >
             <Alert
@@ -111,11 +118,11 @@ export default function Register() {
           </Stack>
         </span>
         <span
-        hidden={ !successMessage }
+          hidden={ !successMessage }
         >
           <Stack
             className="content-field"
-            sx={{ width: '100%' }}
+            sx={ width }
             spacing={2}
             >
             <Alert
@@ -125,7 +132,7 @@ export default function Register() {
             </Alert>
           </Stack>
         </span>
-        <span>
+        <span className="text-span">
           Go back to <Link to="/login">Log In</Link>
         </span>
       </div>

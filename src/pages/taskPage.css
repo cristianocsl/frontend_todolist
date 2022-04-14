@@ -2,9 +2,9 @@ body {
   background-color: #12094c;
 }
 
-.textfield-addbutton {
-  display: flex;
-  margin: 10px 5px 10px 5px;
+.MuiInputBase-root {
+  /* border: 1px solid #90caf9; */
+  border-radius: 4px;
 }
 
 .add-task-logo {
@@ -18,6 +18,11 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center !important;
+}
+
+.textfield-addbutton {
+  display: flex;
+  margin: 10px 5px 10px 5px;
 }
 
 .logout-icon {

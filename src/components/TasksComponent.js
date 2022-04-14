@@ -108,10 +108,10 @@ export default function TasksComponent() {
   
   const mapTasks = (tasks) => tasks.map((item) => (
     <TaskItem
-    item={item}
-    key={item._id}
-    sendChangesToFather={ handleChange }
-    handleDeleteOnFather={ handleDeleteOnFather }
+      item={item}
+      key={item._id}
+      sendChangesToFather={ handleChange }
+      handleDeleteOnFather={ handleDeleteOnFather }
     />
   ));
     
@@ -176,9 +176,11 @@ export default function TasksComponent() {
           }
         </div>
       </div>
-      {
-        renderTasks()
-      }
+      <div className="card-container">
+        {
+          renderTasks()
+        }
+      </div>
     </div>
   );
 }

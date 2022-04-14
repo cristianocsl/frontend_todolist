@@ -137,7 +137,7 @@ export default function TasksComponent() {
         onSubmit={ handleAddTask }
       >
         <InputBase
-          sx={{ width: '100%', border: '1px solid white' }}
+          sx={{ width: '100%', border: '1px solid #90caf9', color: '#90caf9', textAlignLast: 'center' }}
           className="content-field"
           required
           id="outlined-text-input"
@@ -145,7 +145,7 @@ export default function TasksComponent() {
           name="input"
           value={textField.task}
           onChange={ (e) => setTextField({...textField, task: e.target.value}) }
-          />
+        />
         <IconButton type="submit">
           <AddIcon sx={{ color: colors.blue[100] }} />
         </IconButton>

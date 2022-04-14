@@ -71,61 +71,60 @@ export default function TaskItem({ item, sendChangesToFather, handleDeleteOnFath
       key={item._id + 1}
       className="container-task"
     >
-    <div className="buttons-container">
-      { `${date[0]}/${date[1]}` }
+      <div className="buttons-container">
+        { `${date[0]}/${date[1]}` }
 
-      <TextField
-        key={item._id}
-        onKeyPress={ (event) => event.key === 'Enter' && handleSave(event) }
-        label={ chooseLabel() }
-        variant={ chooseVariant() }
-        sx={{ width: '100%', borderColor: 'rgba(0, 0, 0, 0)' }}
-        required
-        id="outlined-text-input"
-        type="text"
-        name="text"
-        value={textValue}
-        disabled={!saveButton}
-        onChange={ handleChangeTextField }
-      />
-        { renderSaveOrEditButton() }
-    </div>
+        <TextField
+          key={item._id}
+          onKeyPress={ (event) => event.key === 'Enter' && handleSave(event) }
+          label={ chooseLabel() }
+          variant={ chooseVariant() }
+          sx={{ width: '100%', borderColor: 'rgba(0, 0, 0, 0)' }}
+          required
+          id="outlined-text-input"
+          type="text"
+          name="text"
+          value={textValue}
+          disabled={!saveButton}
+          onChange={ handleChangeTextField }
+        />
+          { renderSaveOrEditButton() }
+      </div>
 
-    <div className="select-edit-remove">
-      <Box className="select">
-        <FormControl
-          fullWidth
-          variant="standard"
-        >
-          <InputLabel id="demo-simple-select-label">Status</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={item.status}
-            defaultValue={item.status}
-            name="select"
-            className="icon-button"
-            onChange={handleChangeSelect}
+      <div className="select-edit-remove">
+        <Box className="select">
+          <FormControl
+            fullWidth
+            variant="standard"
           >
-            {
-              options.map((option) => {
-                return <MenuItem value={option} key={option}>{option}</MenuItem>;
-              })
-            }
-          </Select>
-        </FormControl>
-      </Box>
-      <div>
-        <IconButton
-          onClick={ handleDelete }
-          className="icon-button"
-          sx={{ color: '#12094c' }}
-        >
-          <DeleteIcon />
-        </IconButton>
+            <InputLabel id="demo-simple-select-label">Status</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={item.status}
+              name="select"
+              className="icon-button"
+              onChange={ handleChangeSelect }
+            >
+              {
+                options.map((option) => {
+                  return <MenuItem value={ option } key={ option }>{ option }</MenuItem>;
+                })
+              }
+            </Select>
+          </FormControl>
+        </Box>
+        <div>
+          <IconButton
+            onClick={ handleDelete }
+            className="icon-button"
+            sx={{ color: '#12094c' }}
+          >
+            <DeleteIcon />
+          </IconButton>
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 

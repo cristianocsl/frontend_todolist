@@ -5,6 +5,7 @@ import { Alert, Button, Stack, Box, LinearProgress } from '@mui/material';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import { colors } from '@mui/material/';
 import fetchByMethod from '../fecthApi';
+import { inputLabelProps, inputProps } from '../makeStyles';
 import './register.css';
 
 export default function Register() {
@@ -65,6 +66,8 @@ export default function Register() {
           id="outlined-required"
           label="name"
           name="name"
+          InputProps={ inputProps }
+          InputLabelProps={ inputLabelProps }
           onChange={ handleChange }
         />
         <TextField
@@ -75,6 +78,8 @@ export default function Register() {
           label="email"
           type="email"
           name="email"
+          InputProps={ inputProps }
+          InputLabelProps={ inputLabelProps }
           onChange={ handleChange }
         />
         <TextField
@@ -85,6 +90,8 @@ export default function Register() {
           label="Password"
           type="password"
           name="password"
+          InputProps={ inputProps }
+          InputLabelProps={ inputLabelProps }
           onChange={ handleChange }
         />
         <Button
@@ -96,7 +103,7 @@ export default function Register() {
           Register
         </Button>
         <span
-        hidden={ !errorMessage || successMessage }
+          hidden={ !errorMessage || successMessage }
         >
           <Stack
             className="content-field"
@@ -111,7 +118,7 @@ export default function Register() {
           </Stack>
         </span>
         <span
-        hidden={ !successMessage }
+          hidden={ !successMessage }
         >
           <Stack
             className="content-field"
@@ -125,7 +132,7 @@ export default function Register() {
             </Alert>
           </Stack>
         </span>
-        <span>
+        <span className="text-span">
           Go back to <Link to="/login">Log In</Link>
         </span>
       </div>

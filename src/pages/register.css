@@ -21,6 +21,10 @@
   width: 300px;
 }
 
+.text-span {
+  color: #90caf9;
+}
+
 @media screen and (max-width: 942px ) {
   .content-field {
     margin: 5px 0 5px 0 !important;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fetchByMethod from '../fecthApi/index';
-import { TextField, IconButton, Button } from '@mui/material';
+import { InputBase, IconButton, Button } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import TaskItem from './TaskItem';
 import './taskComponent.css';
@@ -136,8 +136,8 @@ export default function TasksComponent() {
         className="textfield-addbutton"
         onSubmit={ handleAddTask }
       >
-        <TextField
-          sx={{ width: '100%' }}
+        <InputBase
+          sx={{ width: '100%', border: '1px solid white' }}
           className="content-field"
           required
           id="outlined-text-input"

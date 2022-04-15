@@ -111,10 +111,10 @@ Todas as tarefas criadas, e suas modificações de texto e de status, são regis
 Casos específicos de uso serão demonstrados nos gifs seguintes:
 
 ##
+<p>Adicionando uma tarefa</p>
 ![]("https://user-images.githubusercontent.com/82241160/163584010-3a3a72eb-8a35-449a-818b-6edbb06f3f65.gif")
 
 <div align="center">
-  <p>Adicionando uma tarefa</p>
   <img src="https://user-images.githubusercontent.com/82241160/163584010-3a3a72eb-8a35-449a-818b-6edbb06f3f65.gif" height="500px" />
 </div>
 
@@ -129,6 +129,10 @@ Casos específicos de uso serão demonstrados nos gifs seguintes:
   <p>Exibindo opções de filtro a partir do botão FILTERS</p>
   <img src="https://user-images.githubusercontent.com/82241160/163586821-2c9e5f32-f4b1-4386-be5b-94f1b3948655.gif" height="500px" />
 </div>
+
+##
+<p>Exibindo opções de filtro a partir do botão FILTERS</p>
+![todo-botao-filtros](https://user-images.githubusercontent.com/82241160/163586821-2c9e5f32-f4b1-4386-be5b-94f1b3948655.gif)
 
 ##
 <div align="center">

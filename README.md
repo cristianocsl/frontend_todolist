@@ -108,7 +108,44 @@ A lista de tarefas é apresentada através de cards contendo a data da criação
 
 Todas as tarefas criadas, e suas modificações de texto e de status, são registradas no bando de dados em nuvem Atlas do MongoDB.
 
+Casos específicos de uso serão demonstrados nos gifs seguintes:
+
 ##
+<div align="center">
+  <p>Adicionando uma tarefa</p>
+  <img src="https://user-images.githubusercontent.com/82241160/163584010-3a3a72eb-8a35-449a-818b-6edbb06f3f65.gif" height="500px" />
+</div>
+
+##
+<div align="center">
+  <p>Editando o texto de uma tarefa</p>
+  <img src="https://user-images.githubusercontent.com/82241160/163585027-142e035a-9858-4301-9001-e19e03804895.gif" height="500px" />
+</div>
+
+##
+<div align="center">
+  <p>Exibindo opções de filtro a partir do botão FILTERS</p>
+  <img src="https://user-images.githubusercontent.com/82241160/163586821-2c9e5f32-f4b1-4386-be5b-94f1b3948655.gif" height="500px" />
+</div>
+
+##
+<div align="center">
+  <p>Editando o status de uma tarefa</p>
+  <img src="https://user-images.githubusercontent.com/82241160/163585150-dd3ba757-5039-49e9-bbed-ed7708c078d7.gif" height="500px" />
+</div>
+
+##
+<div align="center">
+  <p>Ordenando as tarefas por ordem alfabética</p>
+  <img src="https://user-images.githubusercontent.com/82241160/163586140-8a601c0d-85c7-456e-bac8-526187ff96ef.gif" height="500px" />
+</div>
+
+##
+<div align="center">
+  <p>Removendo tarefas</p>
+  <img src="https://user-images.githubusercontent.com/82241160/163586283-357e1bd2-d5a4-4dab-9e80-dbac381639b2.gif" height="500px" />
+</div>
+
 
 ## Ferramentas utilizadas
 

@@ -111,11 +111,8 @@ Todas as tarefas criadas, e suas modificações de texto e de status, são regis
 Casos específicos de uso serão demonstrados nos gifs seguintes:
 
 ##
-<p>Adicionando uma tarefa</p>
-![]("https://user-images.githubusercontent.com/82241160/163584010-3a3a72eb-8a35-449a-818b-6edbb06f3f65.gif")
-
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/82241160/163584010-3a3a72eb-8a35-449a-818b-6edbb06f3f65.gif" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/163590950-b67a0d92-6e30-46d3-b3a3-230c1c60bb67.gif" height="500px" />
 </div>
 
 ##

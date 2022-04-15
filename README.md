@@ -48,7 +48,7 @@ A primeira tela da aplicação é de login. Nela, deve-se informar o email e sen
 A tela de cadastro é composta dos campos name, email e password. Os campos não podem estar vazios. Caso estejam, será mostrada uma mensagem pedindo o preenchimento do campo (ver imagens). Também haverá mensagens de erro caso os campos name e password não tenham a quantidade mínima de caracteres exigidos, ou caso o email cadastrado já exista no banco de dados, ou ainda se o email passado para o campo não seja um email válido.
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/82241160/157142167-eaf8d3b0-8067-4292-acf0-3ccef3c84d5f.png" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/163577544-66d39940-9f2f-468b-b5de-61b0b40ece45.jpg" height="500px" />
   <img src="https://user-images.githubusercontent.com/82241160/157142169-e1ed46f3-4a19-461e-b0c7-beb6a58a699c.png" height="500px" />
   <img src="https://user-images.githubusercontent.com/82241160/157142171-137692da-f635-47ee-9cb6-ddb85665389d.png" height="500px" />|
   <img src="https://user-images.githubusercontent.com/82241160/157142172-c3c65a30-a94c-405e-bb7d-b2b81dd38d5e.png" height="500px" />

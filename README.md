@@ -6,6 +6,8 @@ Aplicação front-end desenvolvida com React tendo como objetivo o gerenciamento
 
 Através da tela de tarefas, é possível criar, visualizar e remover tarefas. Também é possível modificar as informações de cada tarefa criada.
 
+Um sistema de filtragem e ordenação também constitui a aplicação, sendo possível ordenar as tarefas por ordem alfabética, ordem de data de criação, e também fitrar tarefas a partir de seu status (pending, to do, done).
+
 Esta aplicação é parte integrante de uma aplicação fullstack desenvolvida a partir da Stack <strong>MERN</strong> (MongoDB Express React NodeJS), utiliza arquitetura em camadas (MSC - Model Service Controllers).
 
 ------------
@@ -97,6 +99,16 @@ A tela de cadastro é composta dos campos name, email e password. Os campos não
   <p>Usuário registrado com sucesso</p>
   <img src="https://user-images.githubusercontent.com/82241160/163581003-ab6a5552-126a-425a-801d-ab231127cca5.jpg" height="500px" />
 </div>
+
+## Tela de tarefas
+
+A tela de tarefas é composta de um campo de texto, em que é inserida cada tarefa, e de um botão '+' para adicionar a tarefa a lista.
+
+A lista de tarefas é apresentada através de cards contendo a data da criação da tarefa, o texto que representa a tarefa, um botão de editar/salvar as modificações feitas na tarefa, um selector que possibilita modificar o status da tarefa e um botão de remover a tarefa.
+
+Todas as tarefas criadas, e suas modificações de texto e de status, são registradas no bando de dados em nuvem Atlas do MongoDB.
+
+##
 
 ## Ferramentas utilizadas
 

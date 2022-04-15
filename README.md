@@ -112,41 +112,38 @@ Casos específicos de uso serão demonstrados nos gifs seguintes:
 
 ##
 <div align="center">
+  <p>Adicionando uma tarefa</p>
   <img src="https://user-images.githubusercontent.com/82241160/163590950-b67a0d92-6e30-46d3-b3a3-230c1c60bb67.gif" height="500px" />
 </div>
 
 ##
 <div align="center">
   <p>Editando o texto de uma tarefa</p>
-  <img src="https://user-images.githubusercontent.com/82241160/163585027-142e035a-9858-4301-9001-e19e03804895.gif" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/163591650-f3057198-4a1d-45bb-a38c-39d20be2fac4.gif" height="500px" />
 </div>
 
 ##
 <div align="center">
   <p>Exibindo opções de filtro a partir do botão FILTERS</p>
-  <img src="https://user-images.githubusercontent.com/82241160/163586821-2c9e5f32-f4b1-4386-be5b-94f1b3948655.gif" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/163591705-0afe9efd-3827-465e-805a-35f4f100b406.gif" height="500px" />
 </div>
-
-##
-<p>Exibindo opções de filtro a partir do botão FILTERS</p>
-![todo-botao-filtros](https://user-images.githubusercontent.com/82241160/163586821-2c9e5f32-f4b1-4386-be5b-94f1b3948655.gif)
 
 ##
 <div align="center">
   <p>Editando o status de uma tarefa</p>
-  <img src="https://user-images.githubusercontent.com/82241160/163585150-dd3ba757-5039-49e9-bbed-ed7708c078d7.gif" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/163591786-1fe0ba2a-b3c4-4236-a7ce-931e23baf15d.gif" height="500px" />
 </div>
 
 ##
 <div align="center">
   <p>Ordenando as tarefas por ordem alfabética</p>
-  <img src="https://user-images.githubusercontent.com/82241160/163586140-8a601c0d-85c7-456e-bac8-526187ff96ef.gif" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/163591838-2d5c10b3-8ace-4f87-9750-2bf805429194.gif" height="500px" />
 </div>
 
 ##
 <div align="center">
   <p>Removendo tarefas</p>
-  <img src="https://user-images.githubusercontent.com/82241160/163586283-357e1bd2-d5a4-4dab-9e80-dbac381639b2.gif" height="500px" />
+  <img src="https://user-images.githubusercontent.com/82241160/163591849-be70552b-93a9-4f68-8954-26582a09af75.gif" height="500px" />
 </div>
 
 

@@ -34,11 +34,12 @@ Esta aplicação é parte integrante de uma aplicação fullstack desenvolvida a
 
 A primeira tela da aplicação é de login. Nela, deve-se informar o email e senha criados no momento do cadastro (ver imagens). Serão mostradas mensagens informativas em caso de email inexistente ou incorreto, de senha incorreta ou de campo não preenchido. Caso ainda não tenha feito o cadastro do usuário, é possível acessar a tela de cadastro no link `Sign Up`.
 
+------------
 <div align="center">
   <p>Tela de login</p>
   <img src="https://user-images.githubusercontent.com/82241160/163577544-66d39940-9f2f-468b-b5de-61b0b40ece45.jpg" height="500px" />
 </div>
-
+------------
 <div align="center">
   <p>Mensagem de erro com email inválido</p>
   <img src="https://user-images.githubusercontent.com/82241160/163578530-b517aca8-d458-41fe-9347-0b4f5345b01f.jpg" height="500px" />

@@ -11,7 +11,7 @@ Um sistema de filtragem e ordenação também constitui a aplicação, sendo pos
 Esta aplicação é parte integrante de uma aplicação fullstack desenvolvida a partir da Stack <strong>MERN</strong> (MongoDB Express React NodeJS), utiliza arquitetura em camadas (MSC - Model Service Controllers).
 
 ------------
-### Veja a aplicação no ar por este link: https://frontend-todolist.vercel.app/
+### Veja a aplicação no ar por este link: https://frontend-todolist.vercel.app/register
 ------------
 
 ## Instruções para rodar o projeto localmente

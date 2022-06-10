@@ -164,6 +164,15 @@ Casos específicos de uso serão demonstrados nos gifs seguintes:
 - LinkedIn: https://www.linkedin.com/in/cristianolimacsl/
 - Github: https://github.com/cristianocsl
 
+---
 
+# Autor
+
+  Cristiano Seabra de Lima
+<br />
+  Desenvolvedor WEB FullStack em constante aprendizado e entusiasta por tecnologia e sua força transformadora no mundo!
+
+  <a href="https://www.linkedin.com/in/cristianolimacsl/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+---
 
 
